@@ -1,0 +1,1006 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Guide to Washington DC, DC, Washington, NLC, 2020, BPA, Business Professionals of America, smithsonian">
+
+    <!--required for hamburger menu-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>Smithsonian Attractions</title>
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Muli');
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .mission {
+            font-size: 20px;
+            color: black;
+            font-family: 'Muli';
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+            margin-top: 5%;
+            line-height: 2.0;
+        }
+        
+        .toppage {
+            box-sizing: border-box;
+            background: url("images-cited/smithsoniantop.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            min-width: 250px;
+            color: #fff;
+            padding-top: 112px;
+            letter-spacing: 2px;
+            font-family: "Montserrat", sans-serif;
+        }
+        
+        .text {
+            font-size: 50px;
+            font-weight: bold;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-family: "Muli";
+            text-align: center;
+            margin-top: 500px;
+            color: white;
+        }
+        /*navigation*/
+        
+        .navigation {
+            text-align: center;
+            width: 100%;
+            font-family: 'Muli';
+            padding: 5px;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            padding: 22px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 15px;
+            margin-top: .5%;
+        }
+        
+        .navigation a:hover {
+            color: #ffffb2;
+            transition: all .5s ease;
+        }
+        
+        .attract-drop {
+            display: none;
+            position: absolute;
+            background-color: white;
+            color: black;
+        }
+        
+        .attract-drop a {
+            color: black;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .attract-drop a:hover {
+            color: black;
+        }
+        
+        .dropdown-content a:hover {
+            color: none;
+            background-color: lightgrey;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown:hover .attract-drop {
+            display: block;
+        }
+        
+        @media screen and (max-width:1200px) {
+            .navigation {
+                text-align: left;
+            }
+            /*end*/
+        }
+        
+        hr {
+            width: 90%;
+        }
+        
+        header {
+            position: fixed;
+            top: 0px;
+            height: 75px;
+            -webkit-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            width: 100%;
+            padding: 15px 75px 15px 35px;
+            text-align: right;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        header.shrink {
+            background-color: #222;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        .top-box {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            margin-top: 550px;
+            bottom: 0px;
+            opacity: .5;
+        }
+        
+        .logo {
+            float: left;
+            display: inline-block;
+            padding: 30px;
+            color: white;
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: 'Muli';
+            padding-right: 0px;
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: #363958;
+            width: 35%;
+            height: 350px;
+            margin-left: 5%;
+            text-align: center;
+            display: none;
+            position: inherit;
+            margin-bottom: 2%;
+            ;
+            color: black;
+            font-family: "Muli";
+            margin-top: 5%;
+        }
+        
+        .card-text {
+            margin-top: 150px;
+            font-size: 35px;
+            color: white;
+        }
+        
+        #second {
+            background-color: #F6F6E5;
+        }
+        
+        #two {
+            color: black;
+        }
+        
+        #third {
+            background-color: #7C0A02;
+            width: 25%;
+        }
+        
+        .image-card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-image: url(images/washington-dc-monuments.jpg);
+            width: 30%;
+            height: 350px;
+            margin-left: 5%;
+            text-align: center;
+            display: inline-block;
+            position: inherit;
+            margin-bottom: 2%;
+            ;
+            color: black;
+            font-family: "Muli";
+            margin-top: 5%;
+        }
+        
+        @media screen and (max-width: 800px) {
+            .outer-foot {
+                height: 450px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .outer-foot {
+                height: 550px;
+            }
+            .text {
+                font-size: 35px;
+                margin-top: 100px;
+                ;
+            }
+        }
+        /*Hamburger*/
+        
+        #menuToggle {
+            display: hidden;
+            position: relative;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+            margin-top: 36px;
+        }
+        
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+        }
+        
+        #menuToggle span {
+            display: hidden;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: white;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+        }
+        /*Transform hamburger icon*/
+        
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+        
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+        
+        #menuToggle input:checked ~ span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+        
+        #menu {
+            position: absolute;
+            width: 100%;
+            margin: -100px 0 0 -50px;
+            padding: 50px;
+            padding-top: ;
+            background: white;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            text-align: left;
+            padding-top: 110px;
+        }
+        
+        #menu li {
+            padding: 10px 0;
+            font-size: 22px;
+            color: black;
+            font-family: 'Muli';
+            font-weight: bold;
+        }
+        
+        #menu a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #menuToggle input:checked ~ ul {
+            transform: none;
+        }
+        
+        @media screen and (max-width: 1360px) {
+            .navigation {
+                display: none;
+            }
+            .logo {
+                float: right;
+                margin-right: 9%;
+            }
+            #menuToggle {
+                display: block;
+            }
+            #menuToggle span {
+                display: block;
+            }
+        }
+        
+        p {
+            margin-left: 5%;
+            margin-right: 50%;
+            font-family: 'Muli';
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .museum {
+            font-weight: bold;
+            font-size: 23px;
+        }
+        
+        .img-museum {
+            float: right;
+            width: 30%;
+            margin-right: 10%;
+            top: 0px;
+            margin-bottom: 2%;
+            margin-top: 2%;
+        }
+        
+        @media screen and (max-width: 950px) {
+            .img-museum {
+                display: none;
+            }
+            p {
+                margin-right: 5%;
+            }
+        }
+        
+        .hours {
+            list-style-type: inherit;
+            margin-left: 5%;
+            margin-right: 50%;
+            font-family: 'Muli';
+            font-size: 20px;
+            line-height: 1.7;
+        }
+        
+        li .sub-menu {
+            display: none;
+            list-style-type: none;
+            color: black;
+        }
+        
+        .visible {
+            display: inline !important;
+            margin-left: 3px;
+            margin-bottom: 3px;
+        }
+        
+        .open-menu-link {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        .sub-menu li a {
+            font-size: 18px;
+            text-align: left;
+        }
+        
+        .menu-item-has-children a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .footer {
+            background-color: #363958;
+            height: 200px;
+            margin-bottom: 0px;
+            margin-top: 50px;
+            width: 100%;
+        }
+        
+        .foot-text {
+            color: white;
+            font-family: 'Muli';
+            font-size: 16px;
+            margin-left: 3%;
+            margin-right: 3%;
+            float: left;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        .btn a {
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+            cursor: pointer;
+            clear: none;
+            display: inline-block;
+            box-shadow: 0 0 0 2px #fff;
+            -webkit-transition: all .15s ease;
+            transition: all .15s ease;
+        }
+        
+        .btn .fa {
+            padding: 0;
+            display: inline-block;
+            margin-right: -1px;
+        }
+        
+        .btn a,
+        .fa a {
+            display: inline-block;
+            color: #fff;
+            font-size: 20px;
+        }
+        
+        .btn.btn-one a:hover {
+            box-shadow: 0 0 0 4px #3b5998;
+            color: #3b5998;
+        }
+        
+        .btn-one {
+            margin-left: -55px;
+        }
+        
+        .btn-two {
+            margin-top: -40px;
+            margin-left: 0px;
+        }
+        
+        .btn.btn-two a:hover {
+            box-shadow: 0 0 0 4px #00aced;
+            color: #00aced;
+        }
+        
+        .btn-three {
+            margin-top: -40px;
+            margin-left: 55px;
+        }
+        
+        .btn.btn-three a:hover {
+            box-shadow: 0 0 0 4px #b2f2ff;
+            color: #b2f2ff;
+        }
+        
+        .social-media {
+            display: inline-block;
+            margin-left: 50%;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .footer {
+                height: 270px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .text {
+                font-size: 35px;
+                margin-top: 100%;
+            }
+        }
+        
+        #credit {
+            font-size: 12px;
+            margin-top: 0%;
+            margin-left: 2%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .list {
+            list-style-type: inherit;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-family: 'Muli';
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .link {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #7C0A02;
+        }
+        
+        .name {
+            text-decoration: none;
+            color: #363958;
+        }
+        
+        .name:hover {
+            color: #7C0A02;
+            transition: 0.2s;
+        }
+        
+        .name:visited {
+            color: #7C0A02;
+        }
+        
+        .price-filter {
+            margin-left: 5%;
+            font-family: 'Muli';
+            line-height: 1.8;
+        }
+        
+        #myBtn {
+            display: none;
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #7C0A02;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50px;
+        }
+        
+        @media screen and (max-width: 620px) {
+            .text {
+                font-size: 35px;
+                margin-top: 100%;
+            }
+            p {
+                font-size: 14px;
+            }
+            .mission {
+                font-size: 18px;
+            }
+            #credit {
+                margin-left: 5%;
+                margin-right: 5%;
+                font-size: 10px;
+            }
+            .footer {
+                height: 290px;
+            }
+            .logo {
+                font-size: 17.5px;
+                margin-right: 15%;
+            }
+            .foot-text {
+                font-size: 14px;
+            }
+            .social-media {
+                margin-left: 45%;
+            }
+            .mission {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .museum {
+                font-size: 15px;
+            }
+            .list {
+                font-size: 14px;
+            }
+            #menu li {
+                font-size: 18px;
+            }
+            .link {
+                font-size: 14px;
+            }
+        }
+        
+        @media handheld,
+        only screen and (max-width: 668px) {
+            .toppage {
+                background-attachment: scroll !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">BPA GUIDE TO WASHINGTON DC</div>
+        <div class="navigation">
+            <a href="index.html">HOME</a>
+            <a href="transportation.html">TRANSPORTATION</a>
+            <a href="food.html">FOOD</a>
+            <div class="dropdown">
+                <a href="attractions.html">ATTRACTIONS</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="museum-non-smith.html">MUSEUMS</a>
+                    <hr>
+                    <a href="gov.html">GOVERNMENT BUILDINGS</a>
+                    <hr>
+                    <a href="parks.html">NATIONAL PARKS</a>
+                    <hr>
+                    <a href="monuments.html">MONUMENTS & MEMORIALS</a>
+                    <hr>
+                    <a href="smithsonian.html">SMITHSONIAN</a>
+                </div>
+            </div>
+            <a href="attire.html">ATTIRE</a>
+            <a href="map.html">MAP</a>
+            <div class="dropdown">
+                <a href="more.html">MORE</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="planner.html">TRIP PLANNER</a>
+                    <hr>
+                    <a href="about-us.html">ABOUT THE DEVELOPERS</a>
+                    <hr>
+                    <a href="resources.html">RESOURCES</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Hidden until certain screen size-->
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <li><a href="index.html">
+                    HOME
+                   </a></li>
+                <li><a href="transportation.html">
+                    TRANSPORTATION
+                   </a></li>
+                <li><a href="food.html">
+                    FOOD</a></li>
+
+                <li class="menu-item-has-children"><a href="attractions.html">ATTRACTIONS</a>
+
+                    <ul class="sub-menu">
+                        <li><a href="museum-non-smith.html">MUSEUMS</a></li>
+                        <li><a href="gov.html">GOVERNMENT BUILDINGS</a></li>
+                        <li><a href="parks.html">NATIONAL PARKS</a></li>
+                        <li><a href="monuments.html">MONUMENTS AND MEMORIALS</a></li>
+                        <li><a href="smithsonian.html">SMITHSONIAN</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="attire.html">
+                    ATTIRE</a></li>
+                <li><a href="map.html">
+                    MAP</a></li>
+
+                <li class="menu-item-has-children"><a href="more.html">MORE</a>
+                    <ul class="sub-menu">
+                                                    <li><a href="planner.html">TRIP PLANNER</a></li>
+                        <li><a href="about-us.html">ABOUT THE DEVELOPERS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--Hidden end-->
+    </header>
+
+    <div class="toppage">
+        <p class="text">SMITHSONIAN</p>
+    </div>
+    <p id="credit">Photo Credit: "Smithsonian Building." Smithsonian Insider, Smithsonian, 24 May 2017, insider.si.edu/2017/05/day-life-smithsonian-american-art-museum/.</p>
+    <br>
+
+    <ul class="price-filter">
+        <li><a class="name" href="#aahc">African American History and Culture Museum</a></li>
+        <li><a class="name" href="#african-art">African Art Museum</a></li>
+        <li><a class="name" href="#air-space">Air and Space Museum</a></li>
+        <li><a class="name" href="#american-history">American History Museum</a></li>
+        <li><a class="name" href="#american-indian">American Indian Museum</a></li>
+        <li><a class="name" href="#anacostia">Anacostia Community Museum</a></li>
+        <li><a class="name" href="#archives">Archives of American Art</a></li>
+        <li><a class="name" href="#freer">Freer Gallery of Art</a></li>
+        <li><a class="name" href="#hirshhorn">Hirshhorn Museum</a></li>
+        <li><a class="name" href="#zoo">National Zoo</a></li>
+        <li><a class="name" href="#natural">Natural History Museum</a></li>
+        <li><a class="name" href="#portrait">Portrait Gallery</a></li>
+        <li><a class="name" href="#postal">Postal Museum</a></li>
+        <li><a class="name" href="#renwick">Renwick Gallery</a></li>
+        <li><a class="name" href="#sackler">Sackler Gallery</a></li>
+        <li><a class="name" href="#castle">Smithsonian Institution Building (The Castle)</a></li>
+    </ul>
+    <hr>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-caret-up"></i></button>
+
+    <p><strong>Security Measures for all Smithsonian Buildings (if there are security measures for specific museums, they will be listed under that museum below):</strong></p>
+    <ul class="list">
+        <li>Do not bring large daypacks, backpacks, or luggage into the museums, as they will be subject to a lengthy search in each building entered. If possible, leave such items on the tour or school bus or in a hotel room.</li>
+        <li>No accommodations are available for eating bag lunches within the museums except in the Kogod Courtyard of the Reynolds Center for American Art and Portraiture.</li>
+        <li style="list-style-type: none">
+            <a id="aahc"></a>
+        </li>
+        <li>Do not bring any sharp items into the museums such as knives (including pocket or "Swiss Army"-style knives), screwdrivers, scissors, etc.</li>
+        <li>Other prohibited items include firearms, pepper spray, and Mace.</li>
+    </ul>
+    <hr>
+
+    <img class="img-museum" src="images-cited/smithsonian/aahc.jpg" alt="aa-history-culture" title="African-American History and Culture Museum">
+    <p class="museum">African-American History and Culture Museum</p>
+    <p>Documenting the lives of African-Americans from decades ago until today, the African-American History and Culture Museum teaches its visitors about the African-American experience, how being African-American impacts their lives, and how they have helped to shape our nation.</p>
+    <p><strong>Cost:</strong> FREE, but must have timed passes except on walk-up days</p>
+    <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. everyday, closed on Christmas day</p>
+    <p><strong>Security Measures:</strong> Visitors must go through a metal detector upon entering and all bags will be x-ray checked.</p>
+    <a id="african-art"></a>
+    <p><strong>Address:</strong> 15th St. and Constitution Ave., NW Washington, DC</p>
+    <p><strong><a class="link" href="https://nmaahc.si.edu" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/smithsonian/african-art.jpg" alt="african-art" title="African Art Museum">
+    <p class="museum">African Art Museum</p>
+    <p>Devoted to the preservation of African Art from all 54 countries in Africa, the African Art Museum collects, exhibits, conserves, and studies the arts of Africa. Displayed are some of the finest examples of traditional and contemporary art for all viewers to absorb and appreciate.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. daily (open until 7:30 p.m. during extended hours), closed on Christmas day</p>
+    <a id="air-space"></a>
+    <p><strong>Address:</strong> 950 Independence Avenue, SW Washington, DC</p>
+    <p><strong><a class="link" href="https://africa.si.edu" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/smithsonian/air-space.jpg" alt="air-space" title="Air and Space Museum">
+    <p class="museum">Air and Space Museum</p>
+    <p>Surround yourself with the some of the countries greatest aircraft, spacecraft, missiles, rockets, and other flight-related artifacts. While here, visitors can go the planetarium and IMAX theater for extraordinary escapes, too.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. daily, closed on Christmas day</p>
+    <p><strong>Security Measures:</strong> Visitors must go through a metal detector upon entering and all bags will be x-ray checked.</p>
+    <a id="american-history"></a>
+    <p><strong>Address:</strong>Independence Avenue and 6th Street, SW Washington, DC</p>
+    <p><strong><a class="link" href="https://airandspace.si.edu" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/smithsonian/american-history.jpg" alt="american-history" title="American History Museum">
+    <p class="museum">American History Museum</p>
+    <p>If you are looking to learn about the scientific, cultural, social, technological, and political development of the United States from colonial times to present day, the American History Museum is right for you. Observe collections dating back hundreds of years that contain everything from the original Star-Spangled Banner document to Dorothy's ruby slippers from the Wizard of Oz.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. daily (open until 7:30 p.m. during extended hours), closed on Christmas day</p>
+    <p><strong>Security Measures:</strong> Visitors must go through a metal detector upon entering and all bags will be hand checked.</p>
+    <a id="american-indian"></a>
+    <p><strong>Address:</strong> 14th Street and Constitution Avenue, NW Washington, DC</p>
+    <p><strong><a class="link" href="http://americanhistory.si.edu" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/smithsonian/american-indian.jpg" alt="american-indian" title="American indian Museum">
+    <p class="museum">American Indian Museum</p>
+    <p>Designed in collaborations with Native tribes and communities, the American Indian Museum displays Native objects, photographs, and media that teach its visitors all about the history and spirit of Native America.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. daily, closed on Christmas day</p>
+    <p><strong>Security Measures:</strong> Visitors must go through a metal detector upon entering and all bags will be hand checked.</p>
+    <a id="anacostia"></a>
+    <p><strong>Address:</strong> 4th Street and Independence Avenue, SW Washington, DC</p>
+    <p><strong><a class="link" href="https://americanindian.si.edu" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/smithsonian/anacostia.jpg" alt="anacostia" title="Anacostia Community Museum">
+    <p class="museum">Anacostia Community Museum</p>
+    <p>Getting its name from its location in the Anacostia neighborhood, the Anacostia Community Museum explores, documents, and analyzes the impact of historical and current social issues on urban societies.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 10 a.m. to 5 p.m. daily, closed on Christmas day</p>
+    <a id="archives"></a>
+    <p><strong>Address:</strong> 1901 Fort Place SE Washington, DC</p>
+    <p><strong><a class="link" href="http://anacostia.si.edu" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/smithsonian/archives.jpg" alt="archives" title="Archives of American Art">
+    <p class="museum">Archives of American Art</p>
+    <p>The Archives of American Art is the world's largest (and continually growing) collection of papers and primary records of the visual arts in America.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 11:30 a.m. to 7 p.m. daily, closed on Christmas day</p>
+    <a id="freer"></a>
+    <p><strong>Address:</strong> 8th and F Streets, NW Washington, DC</p>
+    <p><strong><a class="link" href="https://www.aaa.si.edu" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/smithsonian/freer.jpg" alt="freer-gallery" title="Freer Gallery of Art">
+    <p class="museum">Freer Gallery of Art</p>
+    <p>One of two Smithsonian Museums dedicated to Asian art, the Freer Gallery displays Chinese paintings, Indian sculpture, Islamic painting and metalware, Korean ceramics, and so much more.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. daily, closed on Christmas day</p>
+    <a id="hirshhorn"></a>
+    <p><strong>Address:</strong> Jefferson Drive and 12th Street, SW Washington, DC</p>
+    <p><strong><a class="link" href="https://www.si.edu/Museums/freer-gallery" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/smithsonian/hirshhorn.jpg" alt="hirshhorn" title="Hirshhorn Museum">
+    <p class="museum">Hirshhorn Museum</p>
+    <p>This museum features international modern and contemporary art in the Gordon Bunshaft designed cylindrical building, adjoining plaza, and sunken sculpture garden.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong>
+        <ul class="list">
+            <li>Museum: 10 a.m. to 5:30 p.m. daily</li>
+            <li>Plaza: 7:30 a.m. to 5:30 p.m. daily</li>
+            <li>Sculpture Garden: 7:30 a.m. to dusk daily</li>
+            <li>All closed on Christmas day</li>
+        </ul>
+        <a id="zoo"></a>
+        <p><strong>Address:</strong> Independence Avenue at 7th Street, SW Washington, DC</p>
+        <p><strong><a class="link" href="https://hirshhorn.si.edu" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/smithsonian/national-zoo.jpg" alt="national-zoo" title="National Zoo">
+        <p class="museum">National Zoo</p>
+        <p>Home to over 1,500 animals and 300 different species, the National Zoo teaches its visitors about animals across the globe and gives everyone the opportunity to be within feet of them. </p>
+        <p><strong>Cost:</strong> FREE</p>
+        <p><strong>Hours:</strong>
+            <ul class="list">
+                <li>March 15-September: 9 a.m. to 6 p.m. daily (Grounds: 8 a.m. to 7 p.m.)</li>
+                <li>October-March 14: 9 a.m. to 4 p.m. daily (Grounds: 8 a.m. to 5 p.m.)</li>
+                <li>Always closed on Christmas day and during bad weather</li>
+            </ul>
+            <a id="natural"></a>
+            <p><strong>Address:</strong> 3001 Connecticut Ave., NW Washington, DC</p>
+            <p><strong><a class="link" href="https://nationalzoo.si.edu" target="blank">More Information Here</a></strong></p>
+            <hr>
+
+            <img class="img-museum" src="images-cited/smithsonian/natural-history.jpg" alt="natural-history" title="Natural History Museum">
+            <p class="museum">Natural History Museum</p>
+            <p>The Natural History Museum is dedicated to understanding the world we live in and what our role is within it. Learn about our world's creation and explore the diversity of live through exhibitions, activities, collections, and research that happens in the lab and field.</p>
+            <p><strong>Cost:</strong> FREE</p>
+            <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. daily (open until 7:30 p.m. during extended hours), closed on Christmas day</p>
+            <p><strong>Security Measures:</strong> Visitors must go through a metal detector upon entering and all bags will be hand checked.</p>
+            <a id="portrait"></a>
+            <p><strong>Address:</strong> 10th Street and Constitution Avenue, NW Washington, DC</p>
+            <p><strong><a class="link" href="https://naturalhistory.si.edu" target="blank">More Information Here</a></strong></p>
+            <hr>
+
+            <img class="img-museum" src="images-cited/smithsonian/portrait.jpg" alt="portrait-gallery" title="Portrait Gallery">
+            <p class="museum">Portrait Gallery</p>
+            <p>Whether you're looking to learn about poets, presidents, actors, visionaries, villains, or anyone in between, the Portrait Gallery is the right place for you. The collection of portraits in this gallery along with stories and biographies paint the picture of America from precolonial times until now.</p>
+            <p><strong>Cost:</strong> FREE</p>
+            <p><strong>Hours:</strong> 11:30 a.m. to 7 p.m. daily, closed on Christmas day</p>
+            <a id="postal"></a>
+            <p><strong>Address:</strong> 8th and F Streets, NW Washington, DC</p>
+            <p><strong><a class="link" href="https://npg.si.edu/home/national-portrait-gallery" target="blank">More Information Here</a></strong></p>
+            <hr>
+
+            <img class="img-museum" src="images-cited/smithsonian/postal.jpg" alt="postal" title="Postal Museum">
+            <p class="museum">Postal Museum</p>
+            <p>Located in the historic D.C. City Post Office, this museum displays the largest collection of stamps and postal-related materials such as mail trucks, card, letters, and materials that came before the use of stamps. Visitors can walk along an old post road, ride with mail in a stagecoach, browse a small post office from the early 20th century, and start their very own stamp collection with free stamps.</p>
+            <p><strong>Cost:</strong> FREE</p>
+            <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. daily, closed on Christmas day</p>
+            <p><strong>Security Measures:</strong> Visitors must go through a metal detector upon entering and all bags will be x-ray checked.</p>
+            <a id="renwick"></a>
+            <p><strong>Address:</strong> 2 Massachusetts Avenue, NE Washington, DC</p>
+            <p><strong><a class="link" href="https://postalmuseum.si.edu/" target="blank">More Information Here</a></strong></p>
+            <hr>
+
+            <img class="img-museum" src="images-cited/smithsonian/renwick.jpg" alt="renwick-gallery" title="Renwick Gallery">
+            <p class="museum">Renwick Gallery</p>
+            <p>Dedicated to exhibiting American contemporary craft, the Renwick Gallery celebrates creators taking innovative approaches to their works. The building housing this gallery was the first building in the United States built specifically to be an art museum.</p>
+            <p><strong>Cost:</strong> FREE</p>
+            <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. daily, closed on Christmas day</p>
+            <a id="sackler"></a>
+            <p><strong>Address:</strong> 1661 Pennsylvania Avenue, NW Washington, DC</p>
+            <p><strong><a class="link" href="https://americanart.si.edu/visit/renwick" target="blank">More Information Here</a></strong></p>
+            <hr>
+
+            <img class="img-museum" src="images-cited/smithsonian/sackler.jpg" alt="sackler-gallery" title="Sackler Gallery">
+            <p class="museum">Sackler Gallery</p>
+            <p>The second gallery dedicated to Asian art, the Sackler Gallery houses both permanent and temporary pieces from ancient times to the present. It includes some of the most important Chinese jades and bronzes, modern Japanese ceramics, and features lectures, concerts, films, and podcasts that all visitors are welcome to attend.</p>
+            <p><strong>Cost:</strong> FREE</p>
+            <p><strong>Hours:</strong> 10 a.m. to 5:30 p.m. daily, closed on Christmas day</p>
+            <a id="castle"></a>
+            <p><strong>Address:</strong> 1050 Independence Avenue, SW Washington, DC</p>
+            <p><strong><a class="link" href="https://www.doaks.org/resources/cultural-philanthropy/arthur-m-sackler-gallery" target="blank">More Information Here</a></strong></p>
+            <hr>
+
+            <img class="img-museum" src="images-cited/smithsonian/castle.jpg" alt="castle" title="Smithsonian Institution Building (The Castle)">
+            <p class="museum">Smithsonian Institution Building (The Castle)</p>
+            <p>The Castle is the signature Smithsonian building and home to the visitor center. While here, visitors can learn about what each museum has to offer, tour the Castle, and consult with experts about what to see and do.</p>
+            <p><strong>Cost:</strong> FREE</p>
+            <p><strong>Hours:</strong> 8:30 a.m. to 5:30 p.m. daily, closed on Christmas day</p>
+            <p><strong>Address:</strong> 1000 Jefferson Drive, SW Washington, DC</p>
+            <p><strong><a class="link" href="https://www.si.edu/museums/smithsonian-institution-building" target="blank">More Information Here</a></strong></p>
+
+            <br>
+            <br>
+
+            <div class="footer">
+                <br>
+                <p class="foot-text">This website was proudly created for the 2018-19 Business Professionals of America Website Design Team Competition. The prompt for this year was to develop a website to assist BPA chapters in planning their attendance at NLC in Washington D.C. If you would like to view Business Professionals of America's social media or contact our chapter, please use the buttons below.</p>
+
+                <br>
+                <div class="social-media">
+                    <div class='btn btn-one'>
+                        <a href="https://www.facebook.com/businessprofessionalsofamerica/"><i class='fa fa-facebook'></i></a>
+                    </div>
+                    <div class='btn btn-two'>
+                        <a href="https://twitter.com/National_BPA"><i class='fa fa-twitter'></i></a>
+                    </div>
+                    <div class='btn btn-three'>
+                        <a href="mailto:huron.bpa@gmail.com"><i class='fa fa-envelope'></i></a>
+                    </div>
+                </div>
+            </div>
+
+            <script type="text/javascript">
+                $(function() {
+                    var shrinkHeader = 550;
+                    $(window).scroll(function() {
+                        var scroll = getCurrentScroll();
+                        if (scroll >= shrinkHeader) {
+                            $('header').addClass('shrink');
+                        } else {
+                            $('header').removeClass('shrink');
+                        }
+                    });
+
+                    function getCurrentScroll() {
+                        return window.pageYOffset || document.documentElement.scrollTop;
+                    }
+                });
+            </script>
+
+            <script>
+                jQuery(document).ready(function($) {
+                    $(".menu-item-has-children").append("<div class='open-menu-link open'>+</div>");
+                    $('.menu-item-has-children').append("<div class='open-menu-link close'>-</div>");
+
+                    $('.open').addClass('visible');
+
+                    $('.open-menu-link').click(function(e) {
+                        var childMenu = e.currentTarget.parentNode.children[1];
+                        if ($(childMenu).hasClass('visible')) {
+                            $(childMenu).removeClass("visible");
+
+                            $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+                            $(e.currentTarget.parentNode.children[2]).addClass("visible");
+                        } else {
+                            $(childMenu).addClass("visible");
+
+                            $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+                            $(e.currentTarget.parentNode.children[3]).addClass("visible");
+                        }
+                    });
+                });
+            </script>
+
+            <script>
+                window.onscroll = function() {
+                    scrollFunction()
+                };
+
+                function scrollFunction() {
+                    if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                        document.getElementById("myBtn").style.display = "block";
+                    } else {
+                        document.getElementById("myBtn").style.display = "none";
+                    }
+                }
+
+                // When the user clicks on the button, scroll to the top of the document
+                function topFunction() {
+                    document.body.scrollTop = 330;
+                    document.documentElement.scrollTop = 300;
+                }
+            </script>
+
+</body>
+
+</html>

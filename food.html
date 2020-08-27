@@ -1,0 +1,1223 @@
+<!DOCTYPE html>
+<html>
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<meta charset="UTF-8">
+<meta name="keywords" content="Washington DC, D.C, food, NLC, 2020, restuarants">
+
+<!--required for hamburger menu-->
+<script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+<link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+<title>Food</title>
+
+<style type="text/css">
+    @import url('https://fonts.googleapis.com/css?family=Muli');
+    body {
+        margin: 0px;
+    }
+    
+    .card {
+        border-radius: 10px;
+        box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+        background-color: white;
+        width: 20%;
+        margin-left: 4%;
+        text-align: center;
+        position: inherit;
+        margin-bottom: 3%;
+        color: black;
+        font-family: "Muli";
+        display: none;
+        overflow: hidden;
+        float: left;
+        height: 400px;
+    }
+    
+    @media screen and (max-width:1400px) {
+        .card {
+            height: 380px;
+        }
+    }
+    
+    @media screen and (max-width:1150px) {
+        .card {
+            height: 350px;
+        }
+    }
+    
+    .card:hover {
+        box-shadow: 0 8px 16px 0 rgba(0, 0, 0, 0.2);
+        transition: all .5s ease;
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    @media screen and (max-width:1300px) {
+        .card {
+            width: 24.5%;
+            margin-bottom: 5%;
+            margin-left: 6.5%;
+        }
+    }
+    
+    @media screen and (max-width:900px) {
+        .card {
+            width: 40%;
+            margin-bottom: 5%;
+            margin-left: 6.5%;
+            height: 420px;
+        }
+    }
+    
+    @media screen and (max-width:750px) {
+        .card {
+            width: 40%;
+            margin-bottom: 5%;
+            margin-left: 6.5%;
+            height: 360px;
+        }
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    .show {
+        display: block;
+    }
+    
+    .container {
+        margin-top: 20px;
+        overflow: hidden;
+        padding: 2px 16px;
+    }
+    /* Style the buttons */
+    
+    .showall {
+        border: none;
+        outline: none;
+        padding: 12px 16px;
+        background-color: #f1f1f1;
+        cursor: pointer;
+        margin-left: 5%;
+        font-size: 14px;
+    }
+    
+    .showall:hover {
+        background-color: #ddd;
+    }
+    
+    .btn.active {
+        background-color: #666;
+        color: white;
+    }
+    
+    @media screen and (max-width:1300px) {
+        .card {
+            width: 24.5%;
+            margin-bottom: 5%;
+            margin-left: 6.5%;
+        }
+        .buttons {
+            margin-left: 6.5%;
+        }
+    }
+    
+    @media screen and (max-width:900px) {
+        .card {
+            width: 40%;
+            margin-bottom: 5%;
+            margin-left: 6.5%;
+        }
+        .buttons {
+            margin-left: 6.5%;
+        }
+    }
+    
+    img {
+        width: 100%;
+    }
+    
+    @media screen and (max-width:500px) {
+        .buttons {
+            margin-left: 6.5%;
+        }
+    }
+    
+    .toppage {
+        box-sizing: border-box;
+        background: url("images-cited/dc-night.jpg") no-repeat center center fixed;
+        -webkit-background-size: cover;
+        -moz-background-size: cover;
+        background-size: cover;
+        min-width: 250px;
+        color: #fff;
+        padding-top: 112px;
+        letter-spacing: 2px;
+        font-family: "Montserrat", sans-serif;
+    }
+    
+    .text {
+        font-size: 50px;
+        font-weight: bold;
+        margin-left: 5%;
+        margin-right: 5%;
+        font-family: "Muli";
+        text-align: center;
+        margin-top: 500px;
+        color: white;
+    }
+    /*navigation*/
+    
+    .navigation {
+        text-align: center;
+        width: 100%;
+        height: 90px;
+        font-family: 'Muli';
+        padding: 5px;
+    }
+    
+    .navigation a {
+        text-decoration: none;
+        color: white;
+        padding: 22px;
+        font-weight: bold;
+        display: inline-block;
+        font-size: 15px;
+        margin-top: .5%;
+    }
+    
+    .navigation a:hover {
+        color: #ffffb2;
+        transition: all .5s ease;
+    }
+    
+    .attract-drop {
+        display: none;
+        position: absolute;
+        background-color: white;
+        color: black;
+    }
+    
+    .attract-drop a {
+        color: black;
+        padding: 15px;
+        text-decoration: none;
+        display: block;
+    }
+    
+    .attract-drop a:hover {
+        color: black;
+    }
+    
+    .dropdown-content a:hover {
+        color: none;
+        background-color: lightgrey;
+    }
+    
+    .dropdown {
+        position: relative;
+        display: inline-block;
+    }
+    
+    .dropdown:hover .attract-drop {
+        display: block;
+    }
+    
+    @media screen and (max-width:1200px) {
+        .navigation {
+            text-align: left;
+        }
+        /*end*/
+    }
+    
+    hr {
+        width: 90%;
+    }
+    
+    header {
+        position: fixed;
+        top: 0px;
+        height: 75px;
+        -webkit-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+        -moz-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+        box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+        z-index: 999;
+        width: 100%;
+        padding: 15px 75px 15px 35px;
+        text-align: right;
+        transition-duration: 0.8s;
+        -moz-transition-duration: 0.8s;
+        -webkit-transition-duration: 0.8s;
+        -o-transition-duration: 0.8s;
+    }
+    
+    header.shrink {
+        background-color: #222;
+        transition-duration: 0.8s;
+        -moz-transition-duration: 0.8s;
+        -webkit-transition-duration: 0.8s;
+        -o-transition-duration: 0.8s;
+    }
+    
+    .logo {
+        float: left;
+        display: inline-block;
+        padding: 30px;
+        color: white;
+        font-size: 25px;
+        font-weight: bolder;
+        font-family: 'Muli';
+        padding-right: 0px;
+    }
+    /*Hamburger*/
+    
+    #menuToggle {
+        display: hidden;
+        position: relative;
+        z-index: 1;
+        -webkit-user-select: none;
+        user-select: none;
+        margin-top: 36px;
+    }
+    
+    #menuToggle input {
+        display: block;
+        width: 40px;
+        height: 32px;
+        position: absolute;
+        top: -7px;
+        left: -5px;
+        cursor: pointer;
+        opacity: 0;
+        z-index: 2;
+        -webkit-touch-callout: none;
+    }
+    
+    #menuToggle span {
+        display: hidden;
+        width: 33px;
+        height: 4px;
+        margin-bottom: 5px;
+        position: relative;
+        background: white;
+        border-radius: 3px;
+        z-index: 1;
+        transform-origin: 4px 0px;
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+    }
+    /*Transform hamburger icon*/
+    
+    #menuToggle span:first-child {
+        transform-origin: 0% 0%;
+    }
+    
+    #menuToggle span:nth-last-child(2) {
+        transform-origin: 0% 100%;
+    }
+    
+    #menuToggle input:checked ~ span {
+        opacity: 1;
+        transform: rotate(45deg) translate(-2px, -1px);
+        background: #232323;
+    }
+    
+    #menuToggle input:checked ~ span:nth-last-child(3) {
+        opacity: 0;
+        transform: rotate(0deg) scale(0.2, 0.2);
+    }
+    
+    #menuToggle input:checked ~ span:nth-last-child(2) {
+        transform: rotate(-45deg) translate(0, -1px);
+    }
+    
+    #menu {
+        position: absolute;
+        width: 100%;
+        margin: -100px 0 0 -50px;
+        padding: 50px;
+        padding-top: ;
+        background: white;
+        list-style-type: none;
+        -webkit-font-smoothing: antialiased;
+        transform-origin: 0% 0%;
+        transform: translate(-100%, 0);
+        transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+        text-align: left;
+        padding-top: 110px;
+    }
+    
+    #menu li {
+        padding: 10px 0;
+        font-size: 20px;
+        color: black;
+        text-align: left;
+        font-family: 'Muli';
+        font-weight: bold;
+    }
+    
+    #menu a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    #menuToggle input:checked ~ ul {
+        transform: none;
+    }
+    
+    @media screen and (max-width: 1360px) {
+        .navigation {
+            display: none;
+        }
+        .logo {
+            float: right;
+            margin-right: 9%;
+        }
+        #menuToggle {
+            display: block;
+        }
+        #menuToggle span {
+            display: block;
+        }
+    }
+    
+    a {
+        text-decoration: none;
+    }
+    
+    .btn-group button {
+        background-color: #363958;
+        border: 1px solid black;
+        color: white;
+        cursor: pointer;
+        float: left;
+        padding: 15px 32px;
+        font-size: 12px;
+    }
+    
+    .btn-group {
+        margin-left: 5%;
+        margin-bottom: 2%;
+    }
+    
+    .btn-group button:not(:last-child) {
+        border-right: none;
+    }
+    
+    .btn-group button:hover {
+        background-color: #7C0A02;
+        transition: .5s all;
+    }
+    
+    .mission {
+        font-size: 20px;
+        color: black;
+        font-family: 'Muli';
+        margin-left: 10%;
+        margin-right: 10%;
+        text-align: center;
+        margin-top: 5%;
+        line-height: 2.0;
+    }
+    
+    li .sub-menu {
+        display: none;
+        list-style-type: none;
+        color: black;
+    }
+    
+    .visible {
+        display: inline !important;
+        margin-left: 3px;
+        margin-bottom: 3px;
+    }
+    
+    .open-menu-link {
+        display: none;
+        font-size: 22px;
+        cursor: pointer;
+    }
+    
+    .sub-menu li a {
+        font-size: 18px;
+        text-align: left;
+    }
+    
+    .menu-item-has-children a {
+        text-decoration: none;
+        color: black;
+    }
+    
+    @media screen and (max-width: 970px) {
+        #final {
+            margin-top: 50px;
+            margin-bottom: 50px;
+        }
+    }
+    
+    .footer {
+        background-color: #363958;
+        height: 200px;
+        margin-bottom: 0px;
+        margin-top: 50px;
+        width: 100%;
+    }
+    
+    .foot-text {
+        color: white;
+        font-family: 'Muli';
+        font-size: 16px;
+        margin-left: 3%;
+        margin-right: 3%;
+        float: left;
+        line-height: 1.7;
+        text-align: center;
+    }
+    
+    .btn a {
+        height: 40px;
+        width: 40px;
+        display: inline-block;
+        border-radius: 50%;
+        text-align: center;
+        line-height: 32px;
+        color: #fff;
+        cursor: pointer;
+        clear: none;
+        display: inline-block;
+        box-shadow: 0 0 0 2px #fff;
+        -webkit-transition: all .15s ease;
+        transition: all .15s ease;
+    }
+    
+    .btn .fa {
+        padding: 0;
+        display: inline-block;
+        margin-right: -1px;
+    }
+    
+    .btn a,
+    .fa a {
+        display: inline-block;
+        color: #fff;
+        font-size: 20px;
+    }
+    
+    .btn.btn-one a:hover {
+        box-shadow: 0 0 0 4px #3b5998;
+        color: #3b5998;
+    }
+    
+    .btn-one {
+        margin-left: -55px;
+    }
+    
+    .btn-two {
+        margin-top: -40px;
+        margin-left: 0px;
+    }
+    
+    .btn.btn-two a:hover {
+        box-shadow: 0 0 0 4px #00aced;
+        color: #00aced;
+    }
+    
+    .btn-three {
+        margin-top: -40px;
+        margin-left: 55px;
+    }
+    
+    .btn.btn-three a:hover {
+        box-shadow: 0 0 0 4px #b2f2ff;
+        color: #b2f2ff;
+    }
+    
+    .breaks {
+        display: none;
+    }
+    
+    .social-media {
+        display: inline-block;
+        margin-left: 50%;
+    }
+    
+    @media screen and (max-width: 1000px) {
+        .footer {
+            height: 270px;
+        }
+    }
+    
+    #credit {
+        font-size: 12px;
+        margin-top: 0%;
+        margin-left: 2%;
+        text-align: center;
+    }
+    
+    .breaks2 {
+        display: none;
+    }
+    
+    @media screen and (max-width: 620px) {
+        .text {
+            font-size: 35px;
+            margin-top: 100%;
+        }
+        p {
+            font-size: 12px;
+        }
+        .mission {
+            font-size: 18px;
+        }
+        #credit {
+            margin-left: 5%;
+            margin-right: 5%;
+            font-size: 10px;
+        }
+        .breaks {
+            display: block;
+        }
+        .footer {
+            height: 290px;
+        }
+        .logo {
+            font-size: 17.5px;
+            margin-right: 15%;
+        }
+        .foot-text {
+            font-size: 14px;
+        }
+        .social-media {
+            margin-left: 45%;
+        }
+        .mission {
+            margin-left: 5%;
+            margin-right: 5%;
+        }
+        .card {
+            margin-left: 3%;
+            height: 300px;
+            font-size: 13px;
+            width: 45%;
+        }
+        .btn-group button {
+            font-size: 10px;
+        }
+        #menu li {
+            font-size: 18px;
+        }
+    }
+    
+    @media handheld,
+    only screen and (max-width: 668px) {
+        .toppage {
+            background-attachment: scroll !important;
+        }
+    }
+    
+    @media screen and (max-width: 450px) {
+        .breaks2 {
+            display: block;
+        }
+    }
+    
+    @media screen and (max-width: 520px) {
+        .card {
+            height: 270px;
+        }
+    }
+</style>
+
+<body>
+    <header>
+        <div class="logo">BPA GUIDE TO WASHINGTON DC</div>
+        <div class="navigation">
+            <a href="index.html">HOME</a>
+            <a href="transportation.html">TRANSPORTATION</a>
+            <a href="food.html">FOOD</a>
+            <div class="dropdown">
+                <a href="attractions.html">ATTRACTIONS</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="museum-non-smith.html">MUSEUMS</a>
+                    <hr>
+                    <a href="gov.html">GOVERNMENT BUILDINGS</a>
+                    <hr>
+                    <a href="parks.html">NATIONAL PARKS</a>
+                    <hr>
+                    <a href="monuments.html">MONUMENTS & MEMORIALS</a>
+                    <hr>
+                    <a href="smithsonian.html">SMITHSONIAN</a>
+                </div>
+            </div>
+            <a href="attire.html">ATTIRE</a>
+            <a href="map.html">MAP</a>
+            <div class="dropdown">
+                <a href="more.html">MORE</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="planner.html">TRIP PLANNER</a>
+                    <hr>
+                    <a href="about-us.html">ABOUT THE DEVELOPERS</a>
+                    <hr>
+                    <a href="resources.html">RESOURCES</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Hidden until certain screen size-->
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <li><a href="index.html">
+                    HOME
+                   </a></li>
+                <li><a href="transportation.html">
+                    TRANSPORTATION
+                   </a></li>
+                <li><a href="food.html">
+                    FOOD</a></li>
+
+                <li class="menu-item-has-children"><a href="attractions.html">ATTRACTIONS</a>
+
+                    <ul class="sub-menu">
+                        <li><a href="museum-non-smith.html">MUSEUMS</a></li>
+                        <li><a href="gov.html">GOVERNMENT BUILDINGS</a></li>
+                        <li><a href="parks.html">NATIONAL PARKS</a></li>
+                        <li><a href="monuments.html">MONUMENTS AND MEMORIALS</a></li>
+                        <li><a href="smithsonian.html">SMITHSONIAN</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="attire.html">
+                    ATTIRE</a></li>
+                <li><a href="map.html">
+                    MAP</a></li>
+
+                <li class="menu-item-has-children"><a href="more.html">MORE</a>
+                    <ul class="sub-menu">
+                                                    <li><a href="planner.html">TRIP PLANNER</a></li>
+
+                        <li><a href="about-us.html">ABOUT THE DEVELOPERS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--Hidden end-->
+    </header>
+    <!--Hidden end-->
+
+    <div class="toppage">
+        <p class="text"><strong>FOOD</strong></p>
+    </div>
+
+    <div class="mission">
+        Washington D.C. serves up a wide variety of places to eat, so you would be sure to find a restaurant that fits your taste. Here, we made finding that restaurant even easier for you by creating a system where you can choose what you are looking for in a restaurant so we can display the perfect fit!</div>
+    <br>
+    <p id="credit">Photo: Credit"Downtown Washington D.C." Hyatt, www.hyatt.com/en-US/hotel/washington-dc/hyatt-place-washington-dc-white-house/waszw?overlay=true.</p>
+    <hr>
+    <br>
+    <br>
+
+    <button class="showall" onclick="filterSelection('all')">Show all</button>
+    <br>
+    <br>
+
+    <div class="btn-group">
+        <button onclick="filterSelection('cheap')"> $</button>
+        <button onclick="filterSelection('normal')"> $$</button>
+        <button onclick="filterSelection('expensive')"> $$$</button>
+        <button onclick="filterSelection('insane')"> $$$$</button>
+    </div>
+
+    <br>
+    <br>
+
+    <div class="btn-group">
+        <button onclick="filterSelection('north-american')">North American</button>
+        <button onclick="filterSelection('asian')">Asian</button>
+        <button onclick="filterSelection('mex-spanish')">Mexican/Spanish</button>
+        <button onclick="filterSelection('med')">Mediterranean</button>
+        <button onclick="filterSelection('indian')">Indian</button>
+        <button onclick="filterSelection('european')">European</button>
+        <button onclick="filterSelection('eclectic')">Eclectic</button>
+    </div>
+    <br>
+    <br>
+    <div class="breaks2">
+        <br>
+        <br>
+    </div>
+
+    <div class="btn-group" id="final">
+        <button onclick="filterSelection('vegetarian')">Vegetarian</button>
+        <button onclick="filterSelection('vegan')">Vegan</button>
+        <button onclick="filterSelection('pescatarian')">Pescatarian</button>
+        <button onclick="filterSelection('halal')">Halal</button>
+        <button onclick="filterSelection('none')">None</button>
+    </div>
+    <br>
+    <br>
+    <br>
+
+    <div class="breaks">
+        <br>
+        <br>
+        <br>
+    </div>
+
+    <div class="container">
+
+        <a href="https://www.legalseafoods.com" target="_blank">
+            <div class="card normal north-american pescatarian">
+                <img src="images-cited/food/salmon-pixabay.jpg" alt="legal-sea-foods" title="Legal Sea Foods">
+                <div class="container">
+                    <h4>Legal Sea Foods</h4>
+                    <p>$$
+                        <br> Seafood
+                        <br>Pescatarian</p>
+                </div>
+            </div>
+        </a>
+        <a href="http://www.meatsandfoods.com" target="_blank">
+            <div class="card cheap north-american none" id="image">
+                <img src="images-cited/food/hot-dog-pixabay.jpg" alt="meats-foods" title="Meats and Foods">
+                <div class="container">
+                    <h4>Meats and Foods</h4>
+                    <p>$
+                        <br> American
+                        <br>No Accommodations</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.falafelshop.com" target="_blank">
+            <div class="card cheap med vegetarian">
+                <img src="images-cited/food/falafel-pixabay.jpg" alt="falafel" title="Amsterdam Falafel">
+                <div class="container">
+                    <h4>Amsterdam Falafel</h4>
+                    <p>$
+                        <br> Mediterranean
+                        <br> Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.compassrosedc.com" target="_blank">
+            <div class="card normal eclectic pescatarian vegetarian">
+                <img src="images-cited/food/fish-pixabay.jpg" alt="compass-rose" title="Compass Rose">
+                <div class="container">
+                    <h4>Compass Rose</h4>
+                    <p>$$
+                        <br> Eclectic
+                        <br> Pescatarian/Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://lediplomatedc.com/?utm_source=Google%20My%20Business&utm_medium=Website%20Button" target="_blank">
+            <div class="card expensive european pescatarian vegetarian">
+                <img src="images-cited/food/shrimp-cocktail-pixabay.jpg" alt="le-diplomate" title="Le Diplomate">
+                <div class="container">
+                    <h4>Le Diplomate</h4>
+                    <p>$$$
+                        <br> French
+                        <br> Pescatarian/Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.ebbitt.com" target="_blank">
+            <div class="card normal north-american pescatarian">
+                <img src="images-cited/food/squid-pixabay.jpg" alt="old-ebbitt-grill" title="Old Ebbitt Grill">
+                <div class="container">
+                    <h4>Old Ebbitt Grill</h4>
+                    <p>$$
+                        <br> North American
+                        <br> Pescatarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://maketto1351.com/restaurant/" target="_blank">
+            <div class="card normal asian vegetarian">
+                <img src="images-cited/food/dimsum-pixabay.jpg" alt="maketto" title="Maketto" style="width:100%">
+                <div class="container">
+                    <h4>Maketto</h4>
+                    <p>$$
+                        <br> Cambodian/Taiwanese
+                        <br> Vegetarian </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.rasikarestaurant.com" target="_blank">
+            <div class="card expensive indian vegetarian">
+                <img src="images-cited/food/tikka-masala-pixabay.jpg" alt="rasika" title="Rasika">
+                <div class="container">
+                    <h4>Rasika</h4>
+                    <p>$$$
+                        <br> Indian
+                        <br> Vegetarian </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://pizzamartwashingtondc.com/35607" target="_blank">
+            <div class="card normal north-american european vegetarian">
+                <img src="images-cited/food/pizza-pixabay.jpg" alt="pizza-mart" title="Pizza Mart">
+                <div class="container">
+                    <h4>Pizza Mart</h4>
+                    <p>$$
+                        <br> American and Italian
+                        <br> Vegetarian </p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://marcelsdc.com" target="_blank">
+            <div class="card insane european vegetarian">
+                <img src="images-cited/food/lobster-pixabay.jpg" alt="marcel" title="Marcel's">
+                <div class="container">
+                    <h4>Marcel's</h4>
+                    <p>$$$$
+                        <br> French-Belgian
+                        <br> Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://www.gstreetfood.com/#about" target="_blank">
+            <div class="card cheap eclectic vegetarian vegan halal">
+                <img src="images-cited/food/lamb-pixabay.jpg" alt="g-street-food" title="G Street Food">
+                <div class="container">
+                    <h4>G Street Food</h4>
+                    <p>$
+                        <br> Eclectic
+                        <br> Vegetarian/Vegan/Halal</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://benschilibowl.com" target="_blank">
+            <div class="card cheap north-american vegetarian">
+                <img src="images-cited/food/chili-pixabay.jpg" alt="ben's-chili-bowl" title="Ben's Chili Bowl">
+                <div class="container">
+                    <h4>Ben's Chili Bowl</h4>
+                    <p>$
+                        <br>American
+                        <br>Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.tokiunderground.com/#new-page" target="_blank">
+            <div class="card normal asian vegan vegetarian">
+                <img src="images-cited/food/ramen-pixabay.jpg" alt="toki-underground" title="Toki Underground">
+                <div class="container">
+                    <h4>Toki Underground</h4>
+                    <p>$$
+                        <br>Japanese
+                        <br>Vegan/Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.jaleo.com" target="_blank">
+            <div class="card normal mex-spanish vegetarian pescatarian">
+                <img src="images-cited/food/quail-pixabay.jpg" alt="jaleo" title="Jaleo">
+                <div class="container">
+                    <h4>Jaleo</h4>
+                    <p>$$
+                        <br>Spanish
+                        <br>Vegetarian/Pescatarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.zaytinya.com" target="_blank">
+            <div class="card expensive med vegan vegetarian halal">
+                <img src="images-cited/food/spanakopita-pixabay.jpg" alt="zaytinya" title="Zaytinya">
+                <div class="container">
+                    <h4>Zaytinya</h4>
+                    <p>$$$
+                        <br>Mediterranean
+                        <br>Vegan/Vegetarian/Halal</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.tedsbulletin.com" target="_blank">
+            <div class="card normal north-american pescatarian vegetarian">
+                <img src="images-cited/food/fried-chicken-pixabay.jpg" alt="ted-bulletin" title="Ted's Bulletin">
+                <div class="container">
+                    <h4>Ted's Bulletin</h4>
+                    <p>$$
+                        <br>American
+                        <br>Pescatarian/Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.goodstuffeatery.com" target="_blank">
+            <div class="card cheap north-american vegetarian">
+                <img src="images-cited/food/burger-pixabay.jpg" alt="good-stuff-eatery" title="Good Stuff Eatery">
+                <div class="container">
+                    <h4>Good Stuff Eatery</h4>
+                    <p>$
+                        <br>American
+                        <br>Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://andpizza.com" target="_blank">
+            <div class="card cheap north-american vegetarian">
+                <img src="images-cited/food/pizza-pixabay%20copy.jpg" alt="&pizza" title="&pizza">
+                <div class="container">
+                    <h4>&pizza</h4>
+                    <p>$
+                        <br>American
+                        <br>Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://komirestaurant.com" target="_blank">
+            <div class="card insane med vegetarian pescatarian">
+                <img src="images-cited/food/platter-pixabay.jpg" alt="komi" title="Komi">
+                <div class="container">
+                    <h4>Komi</h4>
+                    <p>$$$$
+                        <br>Mediterranean
+                        <br>Vegetarian/Pescatarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://www.mangialardos.com" target="_blank">
+            <div class="card cheap north-american vegetarian pescatarian">
+                <img src="images-cited/food/submarine-sandwich-pixabay.jpg" alt="mangialardo's" title="Mangialardo's">
+                <div class="container">
+                    <h4>Mangialardo's</h4>
+                    <p>$
+                        <br>American
+                        <br>Vegetarian/Pescatarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://www.fioladc.com" target="_blank">
+            <div class="card insane european vegetarian pescatarian">
+                <img src="images-cited/food/spaghetti-pixabay.jpg" alt="fiola" title="Fiola">
+                <div class="container">
+                    <h4>Fiola</h4>
+                    <p>$$$$
+                        <br>Italian
+                        <br>Vegetarian/Pescatarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://www.smokedandstacked.com" target="_blank">
+            <div class="card cheap north-american vegetarian pescatarian">
+                <img src="images-cited/food/club-sandwich-pixabay.jpg" alt="smoked-stacked" title="Smoked and Stacked">
+                <div class="container">
+                    <h4>Smoked and Stacked</h4>
+                    <p>$
+                        <br>American
+                        <br>Vegetarian/Pescatarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://www.ilovenuvegan.com" target="_blank">
+            <div class="card cheap north-american vegan">
+                <img src="images-cited/food/tofu-pixabay.jpg" alt="nuvegan" title="NuVegan Cafe">
+                <div class="container">
+                    <h4>NuVegan Cafe</h4>
+                    <p>$
+                        <br>American
+                        <br>Vegan</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://hipcityveg.com" target="_blank">
+            <div class="card normal north-american vegan">
+                <img src="images-cited/food/veggie-pixabay.jpg" alt="hipcityveg" title="HipCityVeg">
+                <div class="container">
+                    <h4>HipCityVeg</h4>
+                    <p>$$
+                        <br>American
+                        <br>Vegan</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.shouk.com" target="_blank">
+            <div class="card cheap med vegan vegetarian">
+                <img src="images-cited/food/omelette-pixabay.jpg" alt="shouk" title="Shouk">
+                <div class="container">
+                    <h4>Shouk</h4>
+                    <p>$
+                        <br>Mediterranean
+                        <br>Vegan/Vegetarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="http://evolveveganrestaurant.com" target="_blank">
+            <div class="card normal eclectic vegetarian vegan pescatarian">
+                <img src="images-cited/food/yams.jpg" alt="evolve-vegan" title="Evolve Vegan Restaurant">
+                <div class="container">
+                    <h4>Evolve Vegan Restaurant</h4>
+                    <p>$$
+                        <br>Eclectic
+                        <br>Vegetarian/Vegan/Pescatarian</p>
+                </div>
+            </div>
+        </a>
+
+        <a href="https://www.chaiatacos.com" target="_blank">
+            <div class="card cheap mex-spanish vegetarian vegan">
+                <img src="images-cited/food/taco-pixabay.jpg" alt="chaia-tacos" title="Chaia Tacos">
+                <div class="container">
+                    <h4>Chaia Tacos</h4>
+                    <p>$
+                        <br>Mexican
+                        <br>Vegetarian/Vegan</p>
+                </div>
+            </div>
+        </a>
+    </div>
+
+    <div class="footer">
+        <br>
+        <p class="foot-text">This website was proudly created for the 2018-19 Business Professionals of America Website Design Team Competition. The prompt for this year was to develop a website to assist BPA chapters in planning their attendance at NLC in Washington D.C. If you would like to view Business Professionals of America's social media or contact our chapter, please use the buttons below.</p>
+
+        <div class="social-media">
+            <div class='btn btn-one'>
+                <a href="https://www.facebook.com/businessprofessionalsofamerica/"><i class='fa fa-facebook'></i></a>
+            </div>
+            <div class='btn btn-two'>
+                <a href="https://twitter.com/National_BPA"><i class='fa fa-twitter'></i></a>
+            </div>
+            <div class='btn btn-three'>
+                <a href="mailto:huron.bpa@gmail.com"><i class='fa fa-envelope'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script>
+        filterSelection("all")
+
+        function filterSelection(c) {
+            var x, i;
+            x = document.getElementsByClassName("card");
+            if (c == "all") c = "";
+            for (i = 0; i < x.length; i++) {
+                w3RemoveClass(x[i], "show");
+                if (x[i].className.indexOf(c) > -1) w3AddClass(x[i], "show");
+            }
+        }
+
+        function w3AddClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                if (arr1.indexOf(arr2[i]) == -1) {
+                    element.className += " " + arr2[i];
+                }
+            }
+        }
+
+        function w3RemoveClass(element, name) {
+            var i, arr1, arr2;
+            arr1 = element.className.split(" ");
+            arr2 = name.split(" ");
+            for (i = 0; i < arr2.length; i++) {
+                while (arr1.indexOf(arr2[i]) > -1) {
+                    arr1.splice(arr1.indexOf(arr2[i]), 1);
+                }
+            }
+            element.className = arr1.join(" ");
+        }
+
+        // Add active class to the current button (highlight it)
+        var btnContainer = document.getElementById("myBtnContainer");
+        var btns = btnContainer.getElementsByClassName("btn-group button");
+        for (var i = 0; i < btns.length; i++) {
+            btns[i].addEventListener("click", function() {
+                var current = document.getElementsByClassName("active");
+                current[0].className = current[0].className.replace(" active", "");
+                this.className += " active";
+            });
+        }
+    </script>
+
+    <script type="text/javascript">
+        $(function() {
+            var shrinkHeader = 550;
+            $(window).scroll(function() {
+                var scroll = getCurrentScroll();
+                if (scroll >= shrinkHeader) {
+                    $('header').addClass('shrink');
+                } else {
+                    $('header').removeClass('shrink');
+                }
+            });
+
+            function getCurrentScroll() {
+                return window.pageYOffset || document.documentElement.scrollTop;
+            }
+        });
+    </script>
+
+    <script type="text/javascript">
+        jQuery(function($) {
+            $('.accordion-toggle').click(function() {
+                $('.ham-menu').addClass('expand')
+                $('.accordion-toggle').addClass('btn-none')
+            })
+
+            $('.close-btn').click(function() {
+                $('.ham-menu').removeClass('expand')
+                $('.accordion-toggle').removeClass('btn-none')
+            })
+        })
+    </script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $(".menu-item-has-children").append("<div class='open-menu-link open'>+</div>");
+            $('.menu-item-has-children').append("<div class='open-menu-link close'>-</div>");
+
+            $('.open').addClass('visible');
+
+            $('.open-menu-link').click(function(e) {
+                var childMenu = e.currentTarget.parentNode.children[1];
+                if ($(childMenu).hasClass('visible')) {
+                    $(childMenu).removeClass("visible");
+
+                    $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+                    $(e.currentTarget.parentNode.children[2]).addClass("visible");
+                } else {
+                    $(childMenu).addClass("visible");
+
+                    $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+                    $(e.currentTarget.parentNode.children[3]).addClass("visible");
+                }
+            });
+        });
+    </script>
+
+</body>
+
+</html>

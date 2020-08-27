@@ -1,0 +1,1194 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Washington DC, D.C, transportation, NLC, 2020, uber, walking, taxi, bike, roll, bikeshare, metro, trains, metrobus, circulator, streetcar">
+
+    <!--required for hamburger menu-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>Transportation</title>
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Muli');
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        p {
+            font-family: 'Muli';
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .mission {
+            font-size: 20px;
+            color: black;
+            font-family: 'Muli';
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+            line-height: 2.0;
+        }
+        
+        .toppage {
+            box-sizing: border-box;
+            background: url("images-cited/transportation-top.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            min-width: 250px;
+            color: #fff;
+            padding-top: 112px;
+            letter-spacing: 2px;
+            font-family: "Montserrat", sans-serif;
+        }
+        
+        .text {
+            font-size: 50px;
+            font-weight: bold;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-family: "Muli";
+            text-align: center;
+            margin-top: 500px;
+            color: white;
+        }
+        /*navigation*/
+        
+        .navigation {
+            text-align: center;
+            width: 100%;
+            font-family: 'Muli';
+            padding: 5px;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            padding: 22px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 15px;
+            margin-top: .5%;
+        }
+        
+        .navigation a:hover {
+            color: #ffffb2;
+            transition: all .5s ease;
+        }
+        
+        .attract-drop {
+            display: none;
+            position: absolute;
+            background-color: white;
+            color: black;
+        }
+        
+        .attract-drop a {
+            color: black;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .attract-drop a:hover {
+            color: black;
+        }
+        
+        .dropdown-content a:hover {
+            color: none;
+            background-color: lightgrey;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown:hover .attract-drop {
+            display: block;
+        }
+        
+        hr {
+            width: 80%;
+        }
+        
+        header {
+            position: fixed;
+            top: 0px;
+            height: 75px;
+            -webkit-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            width: 100%;
+            padding: 15px 75px 15px 35px;
+            text-align: right;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        header.shrink {
+            background-color: #222;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        .top-box {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            margin-top: 550px;
+            bottom: 0px;
+            opacity: .5;
+        }
+        
+        .logo {
+            float: left;
+            display: inline-block;
+            padding: 30px;
+            color: white;
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: 'Muli';
+            padding-right: 0px;
+        }
+        /*Hamburger*/
+        
+        #menuToggle {
+            display: hidden;
+            position: relative;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+            margin-top: 36px;
+        }
+        
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+        }
+        
+        #menuToggle span {
+            display: hidden;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: white;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+        }
+        /*Transform hamburger icon*/
+        
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+        
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+        
+        #menuToggle input:checked ~ span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+        
+        #menu {
+            position: absolute;
+            width: 100%;
+            margin: -100px 0 0 -50px;
+            padding: 50px;
+            padding-top: ;
+            background: white;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            text-align: left;
+            padding-top: 110px;
+        }
+        
+        #menu li {
+            padding: 10px 0;
+            font-size: 22px;
+            color: black;
+            font-family: 'Muli';
+            font-weight: bold;
+        }
+        
+        #menu a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #menuToggle input:checked ~ ul {
+            transform: none;
+        }
+        
+        @media screen and (max-width: 1360px) {
+            .navigation {
+                display: none;
+            }
+            .logo {
+                float: right;
+                margin-right: 9%;
+            }
+            #menuToggle {
+                display: fixed;
+            }
+            #menuToggle span {
+                display: block;
+            }
+        }
+        
+        li .sub-menu {
+            display: none;
+            list-style-type: none;
+            color: black;
+        }
+        
+        .visible {
+            display: inline !important;
+            margin-left: 3px;
+            margin-bottom: 3px;
+        }
+        
+        .open-menu-link {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        .sub-menu li a {
+            font-size: 18px;
+            text-align: left;
+        }
+        
+        .menu-item-has-children a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .head {
+            font-weight: bold;
+            font-size: 23px;
+        }
+        
+        .method {
+            font-size: 20px;
+            font-family: 'Muli';
+            float: left;
+            width: 45%;
+        }
+        
+        .list {
+            line-height: 1.7;
+            font-family: 'Muli';
+            font-size: 18px;
+        }
+        
+        #list {
+            line-height: 1.7;
+            font-family: 'Muli';
+            font-size: 18px;
+            display: none;
+        }
+        
+        #list2 {
+            line-height: 1.7;
+            font-family: 'Muli';
+            font-size: 18px;
+            display: none;
+        }
+        
+        #list3 {
+            line-height: 1.7;
+            font-family: 'Muli';
+            font-size: 18px;
+            display: none;
+        }
+        
+        #list4 {
+            line-height: 1.7;
+            font-family: 'Muli';
+            font-size: 18px;
+            display: none;
+        }
+        
+        .division {
+            width: 90%;
+        }
+        
+        .container {
+            margin-bottom: 300px;
+        }
+        /*Slideshow*/
+        
+        .slideshow-container {
+            background: #ffffff;
+        }
+        
+        .mySlides {
+            display: none;
+            padding: 80px;
+            text-align: left;
+            height: auto;
+        }
+        
+        .prev,
+        .next {
+            cursor: pointer;
+            position: absolute;
+            top: 50%;
+            width: auto;
+            margin-top: -30px;
+            padding: 16px;
+            color: #888;
+            font-weight: bold;
+            font-size: 20px;
+            border-radius: 0 3px 3px 0;
+            user-select: none;
+        }
+        
+        .next {
+            position: absolute;
+            right: 0;
+            border-radius: 3px 0 0 3px;
+        }
+        
+        .prev:hover,
+        .next:hover {
+            background-color: rgba(0, 0, 0, 0.8);
+            color: white;
+        }
+        
+        .text-container {
+            text-align: center;
+            padding: 20px;
+            background: #363958;
+            overflow: scroll;
+            white-space: nowrap;
+            font-size: 20px;
+            font-family: 'Muli';
+        }
+        
+        .methods {
+            cursor: pointer;
+            color: white;
+            padding: 20px;
+            display: inline-block;
+            transition: all 0.6s ease;
+        }
+        
+        .methods:hover {
+            color: lightgray;
+        }
+        
+        .in-par {
+            color: #7C0A02;
+            font-size: 18px;
+            text-decoration: none;
+            font-weight: bold;
+            transition: all 0.5s ease;
+        }
+        
+        .in-par:hover {
+            color: #363958;
+        }
+        
+        .footer {
+            background-color: #363958;
+            height: 200px;
+            clear: both;
+            width: 100%;
+        }
+        
+        .foot-text {
+            color: white;
+            font-family: 'Muli';
+            font-size: 16px;
+            margin-left: 3%;
+            margin-right: 3%;
+            float: left;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        .btn a {
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+            cursor: pointer;
+            clear: none;
+            display: inline-block;
+            box-shadow: 0 0 0 2px #fff;
+            -webkit-transition: all .15s ease;
+            transition: all .15s ease;
+        }
+        
+        .btn .fa {
+            padding: 0;
+            display: inline-block;
+            margin-right: -1px;
+        }
+        
+        .btn a,
+        .fa a {
+            display: inline-block;
+            color: #fff;
+            font-size: 20px;
+        }
+        
+        .btn.btn-one a:hover {
+            box-shadow: 0 0 0 4px #3b5998;
+            color: #3b5998;
+        }
+        
+        .btn-one {
+            margin-left: -55px;
+        }
+        
+        .btn-two {
+            margin-top: -40px;
+            margin-left: 0px;
+        }
+        
+        .btn.btn-two a:hover {
+            box-shadow: 0 0 0 4px #00aced;
+            color: #00aced;
+        }
+        
+        .btn-three {
+            margin-top: -40px;
+            margin-left: 55px;
+        }
+        
+        .btn.btn-three a:hover {
+            box-shadow: 0 0 0 4px #b2f2ff;
+            color: #b2f2ff;
+        }
+        
+        .social-media {
+            display: inline-block;
+            margin-left: 50%;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .footer {
+                height: 270px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .text {
+                font-size: 35px;
+                margin-top: 100%;
+            }
+        }
+        
+        #credit {
+            font-size: 12px;
+            margin-top: 0%;
+            margin-left: 2%;
+            text-align: center;
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-color: white;
+            margin-left: 1%;
+            width: 24%;
+            position: inherit;
+            margin-bottom: 3%;
+            display: block;
+            color: black;
+            font-family: "Muli";
+            overflow: hidden;
+            float: left;
+            height: 250px;
+        }
+        
+        .type {
+            text-align: center;
+        }
+        
+        .method-pic {
+            float: right;
+            width: 40%;
+            display: block;
+        }
+        
+        .method-pic-walking {
+            float: right;
+            width: 45%;
+            display: block;
+        }
+        
+        .method {
+            float: left;
+            width: 50%;
+            display: block;
+        }
+        
+        .pricing {
+            display: block;
+            font-size: 18px;
+            margin-bottom: 1%;
+            font-family: 'Muli';
+        }
+        
+        .wrapped {
+            list-style-type: none;
+        }
+        
+        @media screen and (max-width:1200px) {
+            .method-pic {
+                width: 50%;
+                margin-right: 25%;
+            }
+            .method-pic-walking {
+                display: none;
+            }
+            .method {
+                width: 100%;
+            }
+        }
+        
+        @media screen and (max-width: 620px) {
+            .text {
+                font-size: 32px;
+                margin-top: 100%;
+            }
+            p {
+                font-size: 15px;
+            }
+            .mission {
+                font-size: 18px;
+            }
+            #credit {
+                margin-left: 5%;
+                margin-right: 5%;
+                font-size: 10px;
+            }
+            .footer {
+                height: 290px;
+            }
+            .logo {
+                font-size: 17.5px;
+                margin-right: 15%;
+            }
+            .foot-text {
+                font-size: 14px;
+            }
+            .social-media {
+                margin-left: 45%;
+            }
+            .mission {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .list {
+                font-size: 15px;
+            }
+            #list {
+                font-size: 15px;
+            }
+            .mySlides {
+                padding: 30px;
+            }
+            #menu li {
+                font-size: 18px;
+            }
+            .in-par {
+                color: #7C0A02;
+                font-size: 14px;
+                text-decoration: none;
+                font-weight: bold;
+                transition: all 0.5s ease;
+            }
+            .link {
+                font-size: 14px;
+            }
+        }
+        
+        .link {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #7C0A02;
+        }
+        
+        @media handheld,
+        only screen and (max-width: 668px) {
+            .toppage {
+                background-attachment: scroll !important;
+            }
+        }
+    </style>
+
+    <body>
+        <header>
+            <div class="logo">BPA GUIDE TO WASHINGTON DC</div>
+            <div class="navigation">
+                <a href="index.html">HOME</a>
+                <a href="transportation.html">TRANSPORTATION</a>
+                <a href="food.html">FOOD</a>
+                <div class="dropdown">
+                    <a href="attractions.html">ATTRACTIONS</a><i class="fa fa-caret-down" style="color: white"></i>
+                    <div class="attract-drop">
+                        <a href="museum-non-smith.html">MUSEUMS</a>
+                        <hr>
+                        <a href="gov.html">GOVERNMENT BUILDINGS</a>
+                        <hr>
+                        <a href="parks.html">NATIONAL PARKS</a>
+                        <hr>
+                        <a href="monuments.html">MONUMENTS & MEMORIALS</a>
+                        <hr>
+                        <a href="smithsonian.html">SMITHSONIAN</a>
+                    </div>
+                </div>
+                <a href="attire.html">ATTIRE</a>
+                <a href="map.html">MAP</a>
+                <div class="dropdown">
+                    <a href="more.html">MORE</a><i class="fa fa-caret-down" style="color: white"></i>
+                    <div class="attract-drop">
+                        <a href="planner.html">TRIP PLANNER</a>
+                    <hr>
+                        <a href="about-us.html">ABOUT THE DEVELOPERS</a>
+                        <hr>
+                        <a href="resources.html">RESOURCES</a>
+                    </div>
+                </div>
+            </div>
+
+            <!--Hidden until certain screen size-->
+            <div id="menuToggle">
+                <input type="checkbox" />
+                <span></span>
+                <span></span>
+                <span></span>
+
+                <ul id="menu">
+                    <li><a href="index.html">
+                    HOME
+                   </a></li>
+                    <li><a href="transportation.html">
+                    TRANSPORTATION
+                   </a></li>
+                    <li><a href="food.html">
+                    FOOD</a></li>
+
+                    <li class="menu-item-has-children"><a href="attractions.html">ATTRACTIONS</a>
+
+                        <ul class="sub-menu">
+                            <li><a href="museum-non-smith.html">MUSEUMS</a></li>
+                            <li><a href="gov.html">GOVERNMENT BUILDINGS</a></li>
+                            <li><a href="parks.html">NATIONAL PARKS</a></li>
+                            <li><a href="monuments.html">MONUMENTS AND MEMORIALS</a></li>
+                            <li><a href="smithsonian.html">SMITHSONIAN</a></li>
+                        </ul>
+                    </li>
+
+                    <li><a href="attire.html">
+                    ATTIRE</a></li>
+                    <li><a href="map.html">
+                    MAP</a></li>
+
+                    <li class="menu-item-has-children"><a href="more.html">MORE</a>
+                        <ul class="sub-menu">
+                                                        <li><a href="planner.html">TRIP PLANNER</a></li>
+
+                            <li><a href="about-us.html">ABOUT THE DEVELOPERS</a></li>
+                            <li><a href="resources.html">RESOURCES</a></li>
+                        </ul>
+                    </li>
+                </ul>
+            </div>
+            <!--Hidden end-->
+        </header>
+        <div class="toppage">
+            <p class="text">TRANSPORTATION</p>
+        </div>
+
+        <p id="credit">Photo Credit: "Washington DC." Cedar Heights Apartments, Edgewood Management, www.edgewoodmgmt.com/apartments/dc/washington/cedar-heights/.</p>
+        <hr>
+        <br>
+        <br>
+
+        <div class="slideshow-container">
+            <div class="text-container">
+                <span class="methods" onclick="currentSlide(1)">Uber</span>
+                <span class="methods" onclick="currentSlide(2)">Walking</span>
+                <span class="methods" onclick="currentSlide(3)">Taxi</span>
+                <span class="methods" onclick="currentSlide(4)">Bike and Roll DC</span>
+                <span class="methods" onclick="currentSlide(5)">Capital Bikeshare</span>
+                <span class="methods" onclick="currentSlide(6)">DC Metro Trains</span>
+                <span class="methods" onclick="currentSlide(7)">Metrobus</span>
+                <span class="methods" onclick="currentSlide(8)">DC Circulator</span>
+                <span class="methods" onclick="currentSlide(9)">DC Streetcar</span>
+            </div>
+        </div>
+
+        <div class="mySlides">
+            <div class="method">
+
+                <p class="head">Uber</p>
+                <p>With Uber, you can choose the size of your car, pay through the Uber app, and see the wait time, cost, and travel time estimate before you decide to get the Uber.</p>
+                <p><strong>Cost:</strong> Depends on time in the vehicle, distance, surge variable (if demand is greater than the number of drivers available, the cost increases), and tipping. </p>
+                <p><strong>Hours of Operation:</strong> 24 hours daily</p>
+                <p><strong>Takes you directly to your destination without stops:</strong> Yes</p>
+                <p><strong>Schedule:</strong> You schedule a ride anytime you need it.</p>
+                <p><strong><a class="link" href="https://www.uber.com" target="blank">More Information Here</a></strong></p>
+                <p style="font-size: 14px">Photo Credit: "2017 Ford Fusion SE Hybrid." Friendly TLC Rentals and Leasing, Friendly, www.friendlytlc.com/vehicle/fleet/.
+                </p>
+                <br>
+                <br>
+            </div>
+            <img class="method-pic" src="images-cited/uber.png" alt="uber" title="Uber">
+        </div>
+
+        <div class="mySlides">
+            <div class="method">
+                <p class="head">Walking</p>
+                <p>Since the sidewalks stretch all across the city, walking is a great transportation option. Also, walking is the only option to see the National Mall and monuments unless you need a wheelchair. There is no cost involved, no wait time, and you get exercise.</p>
+                <p><strong>Cost:</strong> FREE</p>
+                <p><strong>Hours of Operation:</strong> 24 hours daily</p>
+                <p><strong>Takes you directly to your destination without stops:</strong> Yes (that is, unless you stop along the way)</p>
+                <p><strong>Schedule:</strong> You can walk anytime!</p>
+                <br>
+                <br>
+            </div>
+            <img class="method-pic-walking" src="images-cited/walking.png" alt="walking" title="Walking">
+        </div>
+
+        <div class="mySlides">
+            <div class="method">
+                <p class="head">Taxi</p>
+                <p>With the highest taxi to citizen ratio in the country, it's pretty easy to find a taxi in Washington D.C. All taxis accept cash, credit, or debit, making them extremely convenient. Also, an app called "DC Taxi Rider" is available on iPhones and Androids and allows you to choose the size of your taxi and see a cost and time estimate. Overall, taxis are a great way to get around the city.</p>
+                <p><strong>Cost:</strong></p>
+                <ul class="list">
+                    <li>Minimum fare: $3.25</li>
+                    <li>Mileage charge: $0.27 per 1/8 mile</li>
+                    <li>Additional passenger: $1</li>
+                    <li>Possible luggage charge of $0.50 per item in the trunk</li>
+                    <li>Each trip originating at the Reagan National Airport has a surcharge of $2.50.</li>
+                    <li>Phone dispatch fee: $2.00</li>
+                    <li>Dismissal without use charge: $1.50</li>
+                </ul>
+                <p><strong>Hours of Operation:</strong> 24 hours daily</p>
+                <p><strong>Takes you directly to your destination without stops:</strong> Yes</p>
+                <p><strong>Schedule:</strong> You can hail a taxi anytime you see one by sticking your arm out or schedule a taxi to pick you up up by phone anytime.</p>
+                <p><strong><a class="link" href="https://dfhv.dc.gov/page/taxicab-fares" target="blank">More Information Here</a></strong></p>
+                <p style="font-size: 14px">Photo Credit: "Taxi." Meadows Field Airport, www.meadowsfield.com/taxis/.</p>
+                <br>
+                <br>
+            </div>
+            <img class="method-pic" src="images-cited/taxi.png" alt="taxi" title="Taxi">
+        </div>
+
+        <div class="mySlides">
+            <div class="method">
+                <p class="head">Bike and Roll DC</p>
+                <p>If you're looking to get some exercise and have a great time, rent a bike and adventure all around D.C.! Bike and Roll DC offers electric bikes, comfort hybrids, performance bikes, road bikes, tandem bikes, kids' bikes, trailer tandems, trailers/burleys, and manual wheelchairs.</p>
+                <p><strong>Cost:</strong></p>
+                <button class="pricing" onclick="toggleDisplay()">Electric Bike <span style="font-size: 12px">&#9660;</span></button>
+                <div id="list">
+                    <ul>
+                        <li>2 hour minimum: $40</li>
+                        <li>Additional $20/hour</li>
+                        <li>$100 for full day</li>
+                        <li>Minimum age of 16</li>
+                    </ul>
+                </div>
+
+                <button class="pricing" onclick="toggleDisplay2()">Comfort Hybrid and Manual Wheelchair <span style="font-size: 12px">&#9660;</span></button>
+                <div id="list2">
+                    <ul>
+                        <li>2 hour minimum: $16</li>
+                        <li>Additional $8/hour</li>
+                        <li>Maximum day: $40</li>
+                        <li>$50 if rented for 24 hours</li>
+                    </ul>
+                </div>
+
+                <button class="pricing" onclick="toggleDisplay3()">Road Bike and Tandem Bike <span style="font-size: 12px">&#9660;</span></button>
+                <div id="list3">
+                    <ul>
+                        <li>2 hour minimum: $30</li>
+                        <li>Additional $15/hour</li>
+                        <li>Maximum day: $75</li>
+                        <li>$85 if rented for 24 hours</li>
+                    </ul>
+                </div>
+
+                <button class="pricing" onclick="toggleDisplay4()">Kid's Bike, Trailer Tandem, and Trailer/Burley <span style="font-size: 12px">&#9660;</span></button>
+                <div id="list4">
+                    <ul>
+                        <li>2 hour minimum: $10</li>
+                        <li>Additional $5/hour</li>
+                        <li>Maximum day: $25</li>
+                        <li>$35 if rented for 24 hours</li>
+                    </ul>
+                </div>
+
+                <p><strong>Hours of Operation:</strong></p>
+                <ul class="list">
+                    <li>955 L'Enfant Plaza SW North Building Washington, DC 20024-2119 location: 9 a.m. to 5 p.m. daily</li>
+                    <li>50 Massachusetts Ave NE Washington, DC 20002 location: 8 a.m. to 5 p.m. Monday-Saturday, Closed Sunday</li>
+                </ul>
+                <p><strong>Takes you directly to your destination without stops:</strong> Yes (that is, unless you stop along the way)</p>
+                <p><strong>Schedule:</strong> You can rent a bike anytime during these locations' hours of operation.</p>
+                <p><strong><a class="link" href="https://bikeandrolldc.com" target="blank">More Information Here</a></strong></p>
+                <p style="font-size: 14px">Photo Credit: "Bike." Bike and Roll Chicago, bikechicago.com/bikerentals/trek-mt-200-boys/.
+                </p>
+                <br>
+                <br>
+            </div>
+            <img class="method-pic" src="images-cited/bike-roll.png" alt="bike-roll" title="Bike and Roll DC">
+        </div>
+
+        <div class="mySlides">
+            <div class="method">
+                <p class="head">Capital Bikeshare</p>
+                <p>With the ability to pick up a bike anywhere as long as you have a pass or membership, Capital Bikeshare is an extremely convenient way of traveling. It is also extremely affordable and allows you to exercise while sightseeing!</p>
+                <p><strong>Cost:</strong></p>
+                <ul class="list">
+                    <li>Single trip (under 30 minutes): $2</li>
+                    <li>24 hour pass: $8</li>
+                    <li>3-day pass: $17</li>
+                </ul>
+                <p><strong>Hours of Operation:</strong> 24 hours daily</p>
+                <p><strong>Takes you directly to your destination without stops:</strong> Yes (that is, unless you stop along the way)</p>
+                <p><strong>Schedule:</strong> You can ride anytime!</p>
+                <p><strong><a class="link" href="https://www.capitalbikeshare.com" target="blank">More Information Here</a></strong></p>
+                <p style="font-size: 14px">Photo Credit: "Capital Bikeshare Bike." Capital Bikeshare, www.capitalbikeshare.com/how-it-works/meet-the-bike.
+
+                </p>
+                <br>
+                <br>
+            </div>
+            <img class="method-pic" src="images-cited/bikeshare.png" alt="bikeshare" title="Capital Bikeshare">
+
+        </div>
+
+        <div class="mySlides">
+            <div class="method">
+                <p class="head">DC Metro Trains</p>
+                <p>A cost-effective way to get around the city, DC Metro Trains give riders the opportunity to ditch their cars or bikes and get around the city by subway. While it does take longer to get to your destination than many other methods, riding the subway is a unique way to get around.</p>
+                <p><strong>Cost:</strong></p>
+                <ul class="list">
+                    <li>During peak hours: Between $2.25 and $6.00 per trip</li>
+                    <li>Off-peak hours: Between $1.85 and $3.85 per trip</li>
+                    <li>Must pay via SmarTrip card</li>
+                </ul>
+                <p><strong>Hours of Operation:</strong></p>
+                <ul class="list">
+                    <li>5 a.m. to 11:30 p.m. Monday-Thursday</li>
+                    <li>5 a.m. to 1 p.m. Friday</li>
+                    <li>7 a.m. to 1 a.m. Saturday</li>
+                    <li>8 a.m. to 11 p.m. Sunday</li>
+                </ul>
+                <p><strong>Takes you directly to your destination without stops:</strong> No</p>
+                <p><strong>Schedule:</strong> Visit the <a class="in-par" href="https://www.wmata.com/schedules/index.cfm"> Washington Metropolitan Area Transit Authority website </a> to see all train schedules and locations.</p>
+                <p><strong><a class="link" href="https://www.wmata.com/schedules/index.cfm" target="blank">More Information Here</a></strong></p>
+                <p style="font-size: 14px">Photo Credit: "DC Metro Trains Map." Metro of Washington, mapa-metro.com/en/United%20States/Washington/Washington-Metrorail-map.htm.
+                </p>
+                <br>
+                <br>
+            </div>
+            <img class="method-pic" src="images-cited/metro-train.png" alt="metro-train" title="DC Metro Trains">
+        </div>
+
+        <div class="mySlides">
+            <div class="method">
+                <p class="head">Metrobus</p>
+                <p>Providing more than 400,000 trips each day throughout the District of Columbia, Maryland, and Virginia, Metrobus is one of the more common ways of getting around the D.C. area.</p>
+                <p><strong>Cost:</strong></p>
+                <ul class="list">
+                    <li>During peak hours: Between $2.25 and $6.00 per trip</li>
+                    <li>Off-peak hours: Between $1.85 and $3.85 per trip</li>
+                    <li>Must pay via SmarTrip card</li>
+                </ul>
+                <p><strong>Hours of Operation:</strong></p>
+                <ul class="list">
+                    <li>5 a.m. to 11:30 p.m. Monday-Thursday</li>
+                    <li>5 a.m. to 1 p.m. Friday</li>
+                    <li>7 a.m. to 1 a.m. Saturday</li>
+                    <li>8 a.m. to 11 p.m. Sunday</li>
+                </ul>
+                <p><strong>Takes you directly to your destination without stops:</strong> No</p>
+                <p><strong>Schedule:</strong> Visit the <a class="in-par" href="https://www.wmata.com/schedules/index.cfm"> Washington Metropolitan Area Transit Authority website </a> to see all train schedules and locations.</p>
+                <p><strong><a class="link" href="https://www.wmata.com/service/bus/" target="blank">More Information Here</a></strong></p>
+                <p style="font-size: 14px">Photo Credit: "Washington DC Metro Bus Model." Zulily, www.zulily.com/p/washington-dc-metro-bus-model-330616-43121937.html.
+
+                </p>
+
+            </div>
+            <img class="method-pic" src="images-cited/metrobus.jpg" alt="bike-roll" title="Bike and Roll DC">
+            <br>
+            <br>
+        </div>
+
+        <div class="mySlides">
+            <div class="method">
+                <p class="head">DC Circulator</p>
+                <p>One of few free ways to get around D.C., DC Circulator offers rides over many routes throughout the city and is extremely cost-effective.</p>
+                <p><strong>Cost:</strong> FREE</p>
+                <p><strong>Hours of Operation:</strong></p>
+                <ul class="list">
+                    <li>Dupont Circle-Georgetown-Rosslyn, Georgetown-Union Station, Woodley Park-Adams Morgan-McPherson Square Metro routes</li>
+                    <li class="wrapped">
+                        <ul>
+                            <li>6 a.m. to 12 midnight Monday-Thursday</li>
+                            <li>6 am. to 3 a.m. Friday</li>
+                            <li>7 a.m. to 3 a.m. Saturday</li>
+                            <li>7 a.m. to 12 midnight Sunday</li>
+                        </ul>
+                    </li>
+                    <li>Eastern Market-L'Enfant Plaza and Congress Heights-Union Station route</li>
+                    <li class="wrapped">
+                        <ul>
+                            <li>6 a.m. to 9.p.m. Monday-Friday</li>
+                            <li>7 a.m. to 9 p.m. Saturday-Sunday</li>
+                        </ul>
+                    </li>
+                    <li>National Mall (October-March) route</li>
+                    <li class="wrapped">
+                        <ul>
+                            <li>7 a.m. to 7 p.m. Monday-Friday</li>
+                            <li>9 a.m. to 7 p.m. Saturday-Sunday</li>
+                        </ul>
+                    </li>
+                    <li>National Mall (April-September) route</li>
+                    <li class="wrapped">
+                        <ul>
+                            <li>7 a.m. to 8 p.m. Monday-Friday</li>
+                            <li>9 a.m. to 8 p.m. Saturday-Sunday</li>
+                        </ul>
+                    </li>
+                </ul>
+                <p><strong>Takes you directly to your destination without stops:</strong> Occasional unscheduled stops are made, but the buses generally do not make stops.</p>
+                <p><strong>Schedule:</strong> Buses run every ten minutes during the hours of operation along the routes listed above.</p>
+                <p><strong><a class="link" href="https://www.dccirculator.com" target="blank">More Information Here</a></strong></p>
+                <p style="font-size: 14px">Photo Credit: "DC Circulator Bus." DC Circulator, www.dccirculator.com.
+                </p>
+                <br>
+                <br>
+            </div>
+            <img class="method-pic" src="images-cited/dc-circulator.png" alt="circulator" title="DC Circulator">
+        </div>
+
+        <div class="mySlides">
+            <div class="method">
+
+                <p class="head">DC Streetcar</p>
+                <p>One of the cheapest ways of getting around the city that usually takes you to your destination without stopping, DC Streetcar is a fast, great way to go short distances.</p>
+                <p><strong>Cost:</strong></p>
+                <ul class="list">
+                    <li>$1 regular fare</li>
+                    <li>$0.50 for seniors and disabled</li>
+                    <li>Payment options include cash and SmarTrip Card</li>
+                </ul>
+                <p><strong>Hours of Operation:</strong></p>
+                <ul class="list">
+                    <li>6 a.m. to 12 midnight Monday-Thursday</li>
+                    <li>6 a.m. to 2 a.m. Friday</li>
+                    <li>8 a.m. to 2 a.m. Saturday</li>
+                    <li>8 a.m. to 10 p.m. Sunday and holidays</li>
+                </ul>
+                <p><strong>Takes you directly to your destination without stops:</strong> No</p>
+                <p><strong>Schedule:</strong> Visit the <a class="in-par" href="https://www.dcstreetcar.com/riding/transit-map/"> DC Streetcar website </a> to see the transit map and track a streetcar. Cars typically arrive at each stop in 12-15 minutes.</p>
+                <p><strong><a class="link" href="https://www.dcstreetcar.com" target="blank">More Information Here</a></strong></p>
+                <p style="font-size: 14px">Photo Credit: "DC Streetcar Logo." DC Streetcar, www.dcstreetcar.com/about/connect/media-requests/.
+
+                </p>
+                <br>
+                <br>
+            </div>
+            <img class="method-pic" src="images-cited/streetcar.png" alt="streetcar" title="DC Streetcar">
+        </div>
+
+        <div class="footer">
+            <br>
+            <p class="foot-text">This website was proudly created for the 2018-19 Business Professionals of America Website Design Team Competition. The prompt for this year was to develop a website to assist BPA chapters in planning their attendance at NLC in Washington D.C. If you would like to view Business Professionals of America's social media or contact our chapter, please use the buttons below.</p>
+
+            <div class="social-media">
+                <div class='btn btn-one'>
+                    <a href="https://www.facebook.com/businessprofessionalsofamerica/"><i class='fa fa-facebook'></i></a>
+                </div>
+                <div class='btn btn-two'>
+                    <a href="https://twitter.com/National_BPA"><i class='fa fa-twitter'></i></a>
+                </div>
+                <div class='btn btn-three'>
+                    <a href="mailto:huron.bpa@gmail.com"><i class='fa fa-envelope'></i></a>
+                </div>
+            </div>
+        </div>
+
+        <script>
+            var slideIndex = 1;
+            showSlides(slideIndex);
+
+            function plusSlides(n) {
+                showSlides(slideIndex += n);
+            }
+
+            function currentSlide(n) {
+                showSlides(slideIndex = n);
+            }
+
+            function showSlides(n) {
+                var i;
+                var slides = document.getElementsByClassName("mySlides");
+                var dots = document.getElementsByClassName("text");
+                if (n > slides.length) {
+                    slideIndex = 1
+                }
+                if (n < 1) {
+                    slideIndex = slides.length
+                }
+                for (i = 0; i < slides.length; i++) {
+                    slides[i].style.display = "none";
+                }
+                for (i = 0; i < dots.length; i++) {
+                    dots[i].className = dots[i].className.replace(" active", "");
+                }
+                slides[slideIndex - 1].style.display = "block";
+                dots[slideIndex - 1].className += " active";
+            }
+        </script>
+
+        <script type="text/javascript">
+            $(function() {
+                var shrinkHeader = 550;
+                $(window).scroll(function() {
+                    var scroll = getCurrentScroll();
+                    if (scroll >= shrinkHeader) {
+                        $('header').addClass('shrink');
+                    } else {
+                        $('header').removeClass('shrink');
+                    }
+                });
+
+                function getCurrentScroll() {
+                    return window.pageYOffset || document.documentElement.scrollTop;
+                }
+            });
+        </script>
+
+        <script>
+            jQuery(document).ready(function($) {
+                $(".menu-item-has-children").append("<div class='open-menu-link open'>+</div>");
+                $('.menu-item-has-children').append("<div class='open-menu-link close'>-</div>");
+
+                $('.open').addClass('visible');
+
+                $('.open-menu-link').click(function(e) {
+                    var childMenu = e.currentTarget.parentNode.children[1];
+                    if ($(childMenu).hasClass('visible')) {
+                        $(childMenu).removeClass("visible");
+
+                        $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+                        $(e.currentTarget.parentNode.children[2]).addClass("visible");
+                    } else {
+                        $(childMenu).addClass("visible");
+
+                        $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+                        $(e.currentTarget.parentNode.children[3]).addClass("visible");
+                    }
+                });
+            });
+        </script>
+
+        <script>
+            function toggleDisplay() {
+                var x = document.getElementById("list");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function toggleDisplay() {
+                var x = document.getElementById("list");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function toggleDisplay2() {
+                var x = document.getElementById("list2");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function toggleDisplay3() {
+                var x = document.getElementById("list3");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+
+        <script>
+            function toggleDisplay4() {
+                var x = document.getElementById("list4");
+                if (x.style.display === "block") {
+                    x.style.display = "none";
+                } else {
+                    x.style.display = "block";
+                }
+            }
+        </script>
+    </body>
+
+</html>

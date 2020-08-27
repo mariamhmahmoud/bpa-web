@@ -1,0 +1,1372 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Washington DC, D.C, attractions, museums, NLC, 2020">
+    <!--required for hamburger menu-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+    <title>Museums</title>
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Muli');
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .mission {
+            font-size: 20px;
+            color: black;
+            font-family: 'Muli';
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+            margin-top: 5%;
+            line-height: 2.0;
+        }
+        
+        .toppage {
+            box-sizing: border-box;
+            background: url("images-cited/geographic-top.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            min-width: 250px;
+            color: #fff;
+            padding-top: 112px;
+            letter-spacing: 2px;
+            font-family: "Montserrat", sans-serif;
+        }
+        
+        .text {
+            font-size: 50px;
+            font-weight: bold;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-family: "Muli";
+            text-align: center;
+            margin-top: 500px;
+            color: white;
+        }
+        /*navigation*/
+        
+        .navigation {
+            text-align: center;
+            width: 100%;
+            font-family: 'Muli';
+            padding: 5px;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            padding: 22px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 15px;
+            margin-top: .5%;
+        }
+        
+        .navigation a:hover {
+            color: #ffffb2;
+            transition: all .5s ease;
+        }
+        
+        .attract-drop {
+            display: none;
+            position: absolute;
+            background-color: white;
+            color: black;
+        }
+        
+        .attract-drop a {
+            color: black;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .attract-drop a:hover {
+            color: black;
+        }
+        
+        .dropdown-content a:hover {
+            color: none;
+            background-color: lightgrey;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown:hover .attract-drop {
+            display: block;
+        }
+        
+        @media screen and (max-width:1200px) {
+            .navigation {
+                text-align: left;
+            }
+            /*end*/
+        }
+        
+        hr {
+            width: 90%;
+        }
+        
+        header {
+            position: fixed;
+            top: 0px;
+            height: 75px;
+            -webkit-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            width: 100%;
+            padding: 15px 75px 15px 35px;
+            text-align: right;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        header.shrink {
+            background-color: #222;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        .top-box {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            margin-top: 550px;
+            bottom: 0px;
+            opacity: .5;
+        }
+        
+        .logo {
+            float: left;
+            display: inline-block;
+            padding: 30px;
+            color: white;
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: 'Muli';
+            padding-right: 0px;
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 30%;
+            height: 250px;
+            margin-left: 2%;
+            text-align: left;
+            position: inherit;
+            margin-bottom: 2%;
+            color: black;
+            font-family: "Muli";
+            overflow-y: scroll;
+            overflow-x: hidden;
+            float: left;
+            line-height: 1.8;
+        }
+        
+        #second {
+            background-color: #F6F6E5;
+        }
+        
+        #two {
+            color: black;
+        }
+        
+        #third {
+            background-color: #7C0A02;
+            width: 25%;
+        }
+        
+        .image-card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-image: url(images/washington-dc-monuments.jpg);
+            width: 30%;
+            height: 350px;
+            margin-left: 5%;
+            text-align: center;
+            display: inline-block;
+            position: inherit;
+            margin-bottom: 2%;
+            ;
+            color: black;
+            font-family: "Muli";
+            margin-top: 5%;
+        }
+        
+        @media screen and (max-width: 800px) {
+            .outer-foot {
+                height: 450px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .text {
+                font-size: 35px;
+                margin-top: 100%;
+            }
+        }
+        /*Hamburger*/
+        
+        #menuToggle {
+            display: hidden;
+            position: relative;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+            margin-top: 36px;
+        }
+        
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+        }
+        
+        #menuToggle span {
+            display: hidden;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: white;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+        }
+        /*Transform hamburger icon*/
+        
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+        
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+        
+        #menuToggle input:checked ~ span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+        
+        #menu {
+            position: absolute;
+            width: 100%;
+            margin: -100px 0 0 -50px;
+            padding: 50px;
+            padding-top: ;
+            background: white;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            text-align: left;
+            padding-top: 110px;
+        }
+        
+        #menu li {
+            padding: 10px 0;
+            font-size: 22px;
+            color: black;
+            font-family: 'Muli';
+            font-weight: bold;
+        }
+        
+        #menu a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #menuToggle input:checked ~ ul {
+            transform: none;
+        }
+        
+        @media screen and (max-width: 1360px) {
+            .navigation {
+                display: none;
+            }
+            .logo {
+                float: right;
+                margin-right: 9%;
+            }
+            #menuToggle {
+                display: block;
+            }
+            #menuToggle span {
+                display: block;
+            }
+        }
+        
+        p {
+            margin-left: 5%;
+            margin-right: 50%;
+            font-family: 'Muli';
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .museum {
+            font-weight: bold;
+            font-size: 23px;
+        }
+        
+        .img-museum {
+            float: right;
+            width: 30%;
+            margin-right: 10%;
+            top: 0px;
+            margin-bottom: 2%;
+            margin-top: 2%;
+        }
+        
+        @media screen and (max-width: 950px) {
+            .img-museum {
+                display: none;
+            }
+            p {
+                margin-right: 5%;
+            }
+            .cost li {
+                margin-right: 5%;
+            }
+        }
+        
+        .cost {
+            list-style-type: inherit;
+            margin-left: 5%;
+            margin-right: 50%;
+            font-family: 'Muli';
+            font-size: 17px;
+            line-height: 1.7;
+        }
+        
+        .link {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #7C0A02;
+        }
+        
+        .link:hover {
+            color: #363958;
+            transition: all .5s ease;
+        }
+        
+        li .sub-menu {
+            display: none;
+            list-style-type: none;
+            color: black;
+        }
+        
+        .visible {
+            display: inline !important;
+            margin-left: 3px;
+            margin-bottom: 3px;
+        }
+        
+        .open-menu-link {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        .sub-menu li a {
+            font-size: 18px;
+            text-align: left;
+        }
+        
+        .menu-item-has-children a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .footer {
+            background-color: #363958;
+            height: 200px;
+            margin-bottom: 0px;
+            margin-top: 50px;
+            width: 100%;
+        }
+        
+        .foot-text {
+            color: white;
+            font-family: 'Muli';
+            font-size: 16px;
+            margin-left: 3%;
+            margin-right: 3%;
+            float: left;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        .btn a {
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+            cursor: pointer;
+            clear: none;
+            display: inline-block;
+            box-shadow: 0 0 0 2px #fff;
+            -webkit-transition: all .15s ease;
+            transition: all .15s ease;
+        }
+        
+        .btn .fa {
+            padding: 0;
+            display: inline-block;
+            margin-right: -1px;
+        }
+        
+        .btn a,
+        .fa a {
+            display: inline-block;
+            color: #fff;
+            font-size: 20px;
+        }
+        
+        .btn.btn-one a:hover {
+            box-shadow: 0 0 0 4px #3b5998;
+            color: #3b5998;
+        }
+        
+        .btn-one {
+            margin-left: -55px;
+        }
+        
+        .btn-two {
+            margin-top: -40px;
+            margin-left: 0px;
+        }
+        
+        .btn.btn-two a:hover {
+            box-shadow: 0 0 0 4px #00aced;
+            color: #00aced;
+        }
+        
+        .btn-three {
+            margin-top: -40px;
+            margin-left: 55px;
+        }
+        
+        .btn.btn-three a:hover {
+            box-shadow: 0 0 0 4px #b2f2ff;
+            color: #b2f2ff;
+        }
+        
+        .social-media {
+            display: inline-block;
+            margin-left: 50%;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .footer {
+                height: 270px;
+            }
+        }
+        
+        #credit {
+            font-size: 12px;
+            margin-top: 0%;
+            margin-left: 2%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .price-filter {
+            margin-right: 2%;
+        }
+        
+        .centered {
+            margin-left: 1.5%;
+        }
+        
+        .name {
+            text-decoration: none;
+            color: #363958;
+        }
+        
+        .name:hover {
+            color: #7C0A02;
+            transition: 0.2s;
+        }
+        
+        .name:visited {
+            color: #7C0A02;
+        }
+        
+        #myBtn {
+            display: none;
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #7C0A02;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50px;
+        }
+        
+        @media screen and (max-width: 620px) {
+            .text {
+                font-size: 35px;
+                margin-top: 100%;
+            }
+            p {
+                font-size: 14px;
+            }
+            .mission {
+                font-size: 18px;
+            }
+            #credit {
+                margin-left: 5%;
+                margin-right: 5%;
+                font-size: 10px;
+            }
+            .footer {
+                height: 290px;
+            }
+            .logo {
+                font-size: 17.5px;
+                margin-right: 15%;
+            }
+            .foot-text {
+                font-size: 14px;
+            }
+            .social-media {
+                margin-left: 45%;
+            }
+            .mission {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .museum {
+                font-size: 15px;
+            }
+            .cost {
+                font-size: 13px;
+            }
+            .name {
+                font-size: 12px;
+            }
+            .link {
+                font-size: 14px;
+            }
+            #menu li {
+                font-size: 18px;
+            }
+        }
+        
+        @media handheld,
+        only screen and (max-width: 668px) {
+            .toppage {
+                background-attachment: scroll !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">BPA GUIDE TO WASHINGTON DC</div>
+        <div class="navigation">
+            <a href="index.html">HOME</a>
+            <a href="transportation.html">TRANSPORTATION</a>
+            <a href="food.html">FOOD</a>
+            <div class="dropdown">
+                <a href="attractions.html">ATTRACTIONS</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="museum-non-smith.html">MUSEUMS</a>
+                    <hr>
+                    <a href="gov.html">GOVERNMENT BUILDINGS</a>
+                    <hr>
+                    <a href="parks.html">NATIONAL PARKS</a>
+                    <hr>
+                    <a href="monuments.html">MONUMENTS & MEMORIALS</a>
+                    <hr>
+                    <a href="smithsonian.html">SMITHSONIAN</a>
+                </div>
+            </div>
+            <a href="attire.html">ATTIRE</a>
+            <a href="map.html">MAP</a>
+            <div class="dropdown">
+                <a href="more.html">MORE</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="planner.html">TRIP PLANNER</a>
+                    <hr>
+                    <a href="about-us.html">ABOUT THE DEVELOPERS</a>
+                    <hr>
+                    <a href="resources.html">RESOURCES</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Hidden until certain screen size-->
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <li><a href="index.html">
+                    HOME
+                   </a></li>
+                <li><a href="transportation.html">
+                    TRANSPORTATION
+                   </a></li>
+                <li><a href="food.html">
+                    FOOD</a></li>
+
+                <li class="menu-item-has-children"><a href="attractions.html">ATTRACTIONS</a>
+
+                    <ul class="sub-menu">
+                        <li><a href="museum-non-smith.html">MUSEUMS</a></li>
+                        <li><a href="gov.html">GOVERNMENT BUILDINGS</a></li>
+                        <li><a href="parks.html">NATIONAL PARKS</a></li>
+                        <li><a href="monuments.html">MONUMENTS AND MEMORIALS</a></li>
+                        <li><a href="smithsonian.html">SMITHSONIAN</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="attire.html">
+                    ATTIRE</a></li>
+                <li><a href="map.html">
+                    MAP</a></li>
+
+                <li class="menu-item-has-children"><a href="more.html">MORE</a>
+                    <ul class="sub-menu">
+                                                    <li><a href="planner.html">TRIP PLANNER</a></li>
+
+                        <li><a href="about-us.html">ABOUT THE DEVELOPERS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--Hidden end-->
+    </header>
+
+    <div class="toppage">
+        <p class="text">MUSEUMS</p>
+    </div>
+
+    <p id="credit">Photo Credit: Geographic, National. "Shark Exhibit National Geographic Museum." University of New England, 18 June 2017, www.une.edu/news/2017/une-featured-national-geographic-museum-"sharks"-exhibit.</p>
+
+    <p style="text-align: center; margin-right: 5%">To go to any museum, click one of the links in the boxes below. All museums are sorted based on the price of adult tickets.</p>
+
+    <div class="centered">
+        <div class="card">
+            <p>FREE</p>
+            <ul class="price-filter">
+                <li><a class="name" href="#aa-civil">African American Civil War Memorial Museum</a></li>
+                <li><a class="name" href="#american-uni">American University Museum</a></li>
+                <li><a class="name" href="#dar">DAR Museum</a></li>
+                <li><a class="name" href="#folger">Folger Shakespeare Library</a></li>
+                <li><a class="name" href="#douglass">Frederick Douglass National Historic Site</a></li>
+                <li><a class="name" href="#washington-uni">George Washington University Art Galleries</a></li>
+                <li><a class="name" href="#georgetown">Georgetown University Art Galleries</a></li>
+                <li><a class="name" href="#historical-society">Historical Society of Washington D.C.</a></li>
+                <li><a class="name" href="#howard">Howard University Gallery of Art</a></li>
+                <li><a class="name" href="#interior">Interior Museum</a></li>
+                <li><a class="name" href="#archives">National Archives Museum</a></li>
+                <li><a class="name" href="#bonsai">National Bonsai and Penjing Museum</a></li>
+                <li><a class="name" href="#national-gallery">National Gallery of Art</a></li>
+                <li><a class="name" href="#jewish-military">National Museum of American Jewish Military History</a></li>
+                <li><a class="name" href="#wilderness">The Wilderness Society Gallery</a></li>
+                <li><a class="name" href="#navy">U.S. Navy Museum</a></li>
+                <li><a class="name" href="#holocaust">United States Holocaust Memorial Museum</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <p>UNDER $10</p>
+            <ul class="price-filter">
+                <li><a class="name" href="#islamic">America's Islamic Heritage Museum</a></li>
+                <li><a class="name" href="#ford">Ford's Theater</a></li>
+                <li><a class="name" href="#textile">Textile Museum</a></li>
+                <li><a class="name" href="#women-democratic">Women's National Democratic Museum</a></li>
+            </ul>
+        </div>
+
+        <div class="card">
+            <p>$10+</p>
+            <ul class="price-filter">
+                <li><a class="name" href="#dumbarton">Dumbarton</a></li>
+                <li><a class="name" href="#hillwood">Hillwood</a></li>
+                <li><a class="name" href="#spy">International Spy Museum</a></li>
+                <li><a class="name" href="#kreeger">Kreeger Museum</a></li>
+                <li><a class="name" href="#lillian-albert">Lillian and Albert Small Jewish Museum</a></li>
+                <li><a class="name" href="#building">National Building Museum</a></li>
+                <li><a class="name" href="#geographic">National Geographic Museum</a></li>
+                <li><a class="name" href="#women-arts">National Museum of Women in the Arts</a></li>
+                <li style="list-style-type: none">
+                    <a id="aa-civil"></a>
+                </li>
+
+                <li><a class="name" href="#newseum">Newseum</a></li>
+                <li><a class="name" href="#phillips">The Phillips Collection</a></li>
+            </ul>
+        </div>
+    </div>
+    <hr>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-caret-up"></i></button>
+
+    <img class="img-museum" src="images-cited/museums/memorial-museum.jpg" alt="Afican-American Civil War Memorial" title="African American Civil War Memorial Museum">
+    <p class="museum">African American Civil War Memorial Museum</p>
+    <p>You may have learned about the Civil War in school, but textbooks usually gloss over the sacrifices that soldiers made - specifically, African American soldiers. Explore their story by stopping by the African American Civil War Memorial Museum, and learn about the efforts they took to keep the U.S. united.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong></p>
+    <ul class="cost">
+        <li>10 a.m. to 6:30 p.m. Tuesday - Friday</li>
+        <li>10 a.m. to 4 p.m. Saturday</li>
+        <li>12 noon to 4 p.m. Sunday</li>
+        <li>10 a.m. to 5 p.m. Monday</li>
+    </ul>
+    <p><strong>Policies: </strong> United States Park Police are on duty 24 hours a day</p>
+    <a id="american-uni"></a>
+
+    <p><strong>Address:</strong> 1925 Vermont Ave NW, Washington, DC 20001</p>
+    <p><strong><a class="link" href="https://www.afroamcivilwar.org/" target="blank">More Information Here</a></strong></p>
+
+    <hr>
+
+    <img class="img-museum" src="images-cited/museums/american-university.jpg" alt="American University Museum" title="American University Museum">
+    <p class="museum">American University Museum</p>
+    <p>Come to this contemporary art museum to experience art in different mediums from around the globe! From photography to sculptures to paintings, visit this museum today to truly enjoy breathtaking pieces from artists everywhere.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 11 a.m. to 4 p.m. Tuesday-Sunday, Closed Monday</p>
+    <p><strong>Security Measures: </strong> All security needs will be assessed by the University's Department of Public Safety and the Facilities Manager. No weapons of any kind allowed.</p>
+    <a id="islamic"></a>
+
+    <p><strong>Address: </strong>4400 Massachusetts Ave NW, Washington, DC 20016</p>
+    <p><strong><a class="link" href="https://www.american.edu/cas/museum/" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/museums/islamic.jpg" alt="America's Islamic Heritage Museum" title="America's Islamic Heritage Museum">
+    <p class="museum">America's Islamic Heritage Museum</p>
+    <p>Looking to learn more about Islam? Visit America's Islamic Heritage Museum, one of four major museums dedicated to this religion in the United States. Learn about the legacies left behind by some of the world's most influential people and expand your knowledge of one of the five major world religions.</p>
+    <p><strong>Cost:</strong>
+        <ul class="cost">
+            <li>$7 for adults</li>
+            <li>$5 for students and seniors</li>
+        </ul>
+        <p><strong>Hours:</strong></p>
+        <ul class="cost">
+            <li>11 a.m. to 5 p.m. Tuesday-Saturday</li>
+            <li>12 noon to 4 p.m. Sunday</li>
+            <li>Closed Monday</li>
+        </ul>
+        <p><strong>Policies: </strong>N/A</p>
+        <a id="dar"></a>
+
+        <p><strong>Address:</strong> 2315 Martin Luther King Jr Ave SE, Washington, DC 20020</p>
+        <p><strong><a class="link" href="http://www.aihmuseum.org/home.html" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/DAR.jpg" alt="DAR" title="DAR Museum">
+        <p class="museum">DAR Museum</p>
+        <p>Support historic preservation, education, and patriotism by visiting the DAR Museum! Run by the Daughters of the American Revolution, the museum exhibits feature and interpret the material culture as well as the social history of pre-industrial America.</p>
+        <p><strong>Cost:</strong> FREE</p>
+        <p><strong>Hours:</strong> </p>
+        <ul class="cost">
+            <li>8:30 a.m. to 4 p.m. Monday-Friday</li>
+            <li>9 a.m. to 5 p.m. Saturday</li>
+            <li>Closed Sunday</li>
+        </ul>
+        <p><strong>Policies: </strong>Extensive security camera and alarm system in place</p>
+        <a id="dumbarton"></a>
+        <p><strong>Address:</strong> 1776 D St NW, Washington, DC 20006</p>
+        <p><strong><a class="link" href="https://www.dar.org/museum" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/dumbarton.jpg" alt="Dumbarton" title="Dumbarton House">
+        <p class="museum">Dumbarton House</p>
+        <p>Our nation is full of interesting history, but we often glance over the smaller, yet just as interesting, details. Visit the Dumbarton House to catch a glimpse of Federal Period life, and explore the complex background behind it.</p>
+        <p><strong>Cost:</strong> $10 General Admission</p>
+        <p><strong>Hours:</strong> 10 a.m. to 2:45 p.m. Tuesday-Sunday, Closed Monday</p>
+        <p><strong>Policies: </strong>N/A</p>
+        <a id="folger"></a>
+        <p><strong>Address:</strong> 2715 Q St NW, Washington, DC 20007</p>
+        <p><strong><a class="link" href="http://dumbartonhouse.org" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/folger.jpg" alt="Shakespeare" title="Folger Shakespeare Library">
+        <p class="museum">Folger Shakespeare Library</p>
+        <p>Visit the Folger Shakespeare Library to view the largest collection of Shakespeare's works in the entire world. Experience plays, exhibits, and printed works. From scholars, art lovers, and students alike, this library has something for everyone!</p>
+        <p><strong>Cost:</strong> FREE</p>
+        <p><strong>Hours:</strong></p>
+        <ul class="cost">
+            <li>Monday-Saturday: 10 a.m. to 5 p.m.</li>
+            <li>Sunday: 12 noon to 5 p.m.</li>
+        </ul>
+        <p><strong>Policies: </strong>N/A</p>
+        <a id="ford"></a>
+        <p><strong>Address:</strong> 201 E Capitol St SE, Washington, DC 20003</p>
+        <p><strong><a class="link" href="https://www.folger.edu" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/ford.jpg" alt="Ford's Theater" title="Ford's Theater">
+        <p class="museum">Ford's Theater</p>
+        <p>One of the greatest presidents in history was tragically murdered, and this theater is the murder site. Visit the building where President Abraham Lincoln was assassinated to experience a whirlwind of history. Learn about the Civil War, Lincoln's presidency, and his tragic death all at the Ford's Theater Museum.</p>
+        <p><strong>Cost:</strong> $3 (reserve in advance to guarantee tickets) to tour the entire site</p>
+        <p><strong>Hours:</strong> Check the <a class="link" href="https://www.fords.org/visit/historic-site/" target="_blank">Ford's Theater website</a> for tour times and showtimes</p>
+        <p><strong>Policies:</strong> The following are prohibited:</p>
+        <ul class="cost">
+            <li>Tripods</li>
+            <li>Monopods</li>
+            <li>Guns</li>
+            <li>Weapons and toy weapons</li>
+            <li>Knives and pen knives</li>
+            <li>Pets</li>
+            <li>Food and drink (bottled water is permitted)</li>
+            <li>Scissors</li>
+            <li>Aerosol cans</li>
+            <li>Tools</li>
+            <li>Smoking</li>
+            <li>Placards, signs, or banners</li>
+        </ul>
+        <a id="douglass"></a>
+        <p><strong>Address:</strong> 511 10th St NW, Washington, DC 20004</p>
+        <p><strong><a class="link" href="https://www.fords.org/visit/historic-site/museum/" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/douglass.jpeg" alt="Frederick Douglass" title="Frederick Douglass National Historic Site">
+        <p class="museum">Frederick Douglass National Historic Site</p>
+        <p>Born into slavery, Frederick Douglass became a free man and proceeded to fight for equality. Visit the Frederick Douglass National Historic Site to learn more about Douglass's life and his lead role in the movement for freedom and justice for all, no matter what color.</p>
+        <p><strong>Cost:</strong></p>
+        <ul class="cost">
+            <li>Entry: FREE</li>
+            <li>Tickets for historic house tour: $1 per person (reserve in advance)</li>
+        </ul>
+        <p><strong>Hours:</strong> 9 a.m. to 5 p.m. daily</p>
+        <p><strong>Policies: </strong>N/A</p>
+        <a id="washington-uni"></a>
+
+        <p><strong>Address:</strong> 1411 W St SE, Washington, DC 20020</p>
+        <p><strong><a class="link" href="https://www.nps.gov/frdo/index.htm" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/george-art.jpg" alt="washington-university-art" title="George Washington University Art Galleries">
+        <p class="museum">George Washington University Art Galleries</p>
+        <p>Focused on the Washington era, the George Washington University Art Galleries feature a wide variety of art in a multitude of mediums. Visit here to learn more about Washington and what life in the United States might have looked like during his presidency.</p>
+        <p><strong>Cost:</strong> FREE</p>
+        <p><strong>Hours:</strong> 1 p.m. to 6 p.m. Tuesday-Saturday, Closed Sunday-Monday </p>
+        <p><strong>Policies: </strong>N/A</p>
+        <a id="georgetown"></a>
+        <p><strong>Address:</strong> 500 17th Street, NW, 1st floor/ Washington, D.C. 20006</p>
+        <p><strong><a class="link" href="https://www2.gwu.edu/~bradyart/brady/about.html" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/georgetown.jpg" alt="Georgetown Art" title="Georgetown University Art Galleries">
+        <p class="museum">Georgetown University Art Galleries</p>
+        <p>Come to the Georgetown University Art Gallery to explore exhibits featuring a variety of artists from different backgrounds. Enjoy both contemporary and modern pieces in this innovative collection.</p>
+        <p><strong>Cost:</strong> FREE</p>
+        <ul class="cost">
+        </ul>
+        <p><strong>Hours:</strong></p>
+        <ul class="cost">
+            <li>10 a.m. to 6 p.m. Wednesday-Saturday</li>
+            <li>1 p.m. to 5 p.m. Sunday</li>
+            <li>Closed Monday-Tuesday</li>
+        </ul>
+        <p><strong>Policies: </strong>N/A</p>
+        <a id="hillwood"></a>
+
+        <p><strong>Address:</strong> 3535 Prospect St NW, Washington, DC 20007</p>
+        <p><strong><a class="link" href="https://delacruzgallery.georgetown.domains" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <p class="museum">Hillwood</p>
+        <img class="img-museum" src="images-cited/museums/hillwood.jpg" alt="Hillwood" title="Hillwood">
+        <p>Visit the Hillwood Estate, Museum, and Garden to explore a collection of decorative arts. Once a mansion, walk through the gorgeous estate and view a variety of art and sculptural works. Take a stroll through the 13 acres of intricate, decorative gardens. The Hillwood has something everyone will enjoy!</p>
+        <p><strong>Cost:</strong></p>
+        <ul class="cost">
+            <li>Seniors: $15</li>
+            <li>College students: $10</li>
+            <li>Children ages 6-8: $5</li>
+            <li>Children under 6: FREE</li>
+            <li>Hillwood members: FREE</li>
+        </ul>
+        <p><strong>Hours:</strong> 10 a.m. to 5 p.m. Tuesday-Sunday, Closed Monday</p>
+        <p><strong>Policies: </strong>24/7 Security</p>
+        <a id="historical-society"></a>
+        <p><strong>Address:</strong> 4155 Linnean Ave NW, Washington, DC 20008</p>
+        <p><strong><a class="link" href="https://secure.hillwoodmuseum.org/single/PSDetail.aspx?psn=8347" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/historical-society.jpg" alt="Historical Society D.C." title="Historical Society of Washington D.C.">
+        <p class="museum">Historical Society of Washington D.C.</p>
+        <p>Are you interested in learning more about the history of America's capital? If so, you must visit the Historical Society of Washington, D.C. Explore exhibits, listen to lectures, and attend events related to the background and story behind Washington, D.C.</p>
+        <p><strong>Cost:</strong> FREE</p>
+        <p><strong>Hours:</strong> 9 a.m. to 4 p.m. Tuesday-Friday, Closed Saturday-Monday</p>
+        <p><strong>Policies: </strong>N/A</p>
+        <a id="howard"></a>
+        <p><strong>Address: </strong>555 Pennsylvania Avenue, NW, Washington, D.C. 20001</p>
+        <p><strong><a class="link" href="http://www.dchistory.org" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/howard.jpg" alt="Howard Art" title="Howard Universtiy Gallery of Art">
+        <p class="museum">Howard University Gallery of Art</p>
+        <p>The Howard University Gallery of Art features a variety of contemporary works and exhibits from distinguished artists. Everyone is guaranteed to find a piece that intrigues them; a visit to this gallery is a must!</p>
+        <p><strong>Cost:</strong> FREE</p>
+        <p><strong>Hours:</strong></p>
+        <ul class="cost">
+            <li>9:30 a.m. to 5 p.m. Monday-Friday</li>
+            <li>Closed Saturday</li>
+            <li>12 noon to 4 p.m. Sunday</li>
+        </ul>
+        <p><strong>Policies: </strong>N/A</p>
+        <a id="interior"></a>
+        <p><strong>Address:</strong> 2455 6th St NW, Washington, DC 20059</p>
+        <p><strong><a class="link" href="http://www.art.howard.edu/" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/interior.jpg" alt="Interior Museum" title="Interior Museum">
+        <p class="museum">Interior Museum</p>
+        <p>Have you ever wanted to learn more about how the United States preserves its identity? Come to the Interior Museum, where you can learn about the ongoing supervision and care put towards our nation's public lands, natural resources, and cultural heritage.</p>
+        <p><strong>Cost:</strong> FREE</p>
+        <p><strong>Hours:</strong> 8:30 a.m. to 4:30 p.m. Monday-Friday, Closed Saturday-Sunday</p>
+        <p><strong>Policies: </strong> Adults are required to present a photo ID to enter the Stewart Lee Udall Department of the Interior Building. All visitors will be subject to security screenings, including bag and parcel checks.</p>
+        <a id="spy"></a>
+        <p><strong>Address:</strong> 1849 C St NW, Washington, DC 20240</p>
+        <p><strong><a class="link" href="https://www.doi.gov/interiormuseum" target="blank">More Information Here</a></strong></p>
+        <hr>
+
+        <img class="img-museum" src="images-cited/museums/spy.jpeg" alt="Spy Museum" title="Spy Museum">
+        <p class="museum">International Spy Museum</p>
+        <p>Have you ever been interested in learning about the life of a spy? Come to the International Spy Museum, where you can learn about espionage throughout history. Learn about how secret intelligence has been central to protecting our nation throughout the years.</p>
+        <p><strong>Cost:</strong>
+            <ul class="cost">
+                <li>$22.95 for adults</li>
+                <li>$16.95 for seniors, law enforcement, military, veterans, and college students</li>
+                <li>$14.95 for children ages 7-11</li>
+                <li>FREE for children 6 and under</li>
+            </ul>
+            <p><strong>Hours:</strong> 10 a.m. to 6 p.m. daily</p>
+            <p><strong>Policies: </strong> </p>
+            <ul class="cost">
+                <li>Individuals and items may be subject to inspection upon entry to Museum premises.</li>
+                <li>Guests may not display or carry placards, signs, or banners and may not solicit for commercial or charitable purposes or distribute advertisements, pamphlets, handbills and flyers.</li>
+                <li style="list-style-type: none">
+                </li>
+                <li>Weapons of any type are strictly prohibited.</li>
+                <li>Security guard on duty</li>
+            </ul>
+            <a id="kreeger"></a>
+            <p><strong>Address:</strong> 800 F St NW, Washington, DC 20004</p>
+            <p><strong><a class="link" href="https://www.spymuseum.org/about/faqs/#q4" target="blank">More Information Here</a></strong></p>
+            <hr>
+
+            <img class="img-museum" src="images-cited/museums/kreeger.jpg" alt="Kreeger" title="Kreeger Museum">
+            <p class="museum">Kreeger Museum</p>
+            <p>Calling all art lovers! Interested in sculpture, paintings, architecture, and more? Then stop by the Kreeger Museum, home to hundreds of artworks ranging from 19th century paintings to Asian sculptures.</p>
+            <p><strong>Cost:</strong>
+                <ul class="cost">
+                    <li>$10 for adults</li>
+                    <li>$8 for students, seniors, and military</li>
+                    <li>FREE for members and a guest</li>
+                </ul>
+                <p><strong>Hours:</strong> 10 a.m. to 4 p.m. Tuesday-Saturday, Closed Sunday-Monday</p>
+                <p><strong>Policies: </strong>Tripods, monopods, and selfie sticks are not permitted.</p>
+                <a id="lillian-albert"></a>
+                <p><strong>Address:</strong> 2401 Foxhall Rd NW, Washington, DC 20007</p>
+                <p><strong><a class="link" href="https://www.kreegermuseum.org" target="blank">More Information Here</a></strong></p>
+
+                <hr>
+
+                <img class="img-museum" src="images-cited/museums/lillian-albert.jpg" alt="Lillian-Albert" title="Lillian and Albert Small Jewish Museum">
+                <p class="museum">Lillian and Albert Small Jewish Museum</p>
+                <p>Built in the 1800s, this historic synagogue is the oldest in the U.S. Now the home to not only a sanctuary but several Jewish American artifacts as well, the Lillian & Albert Small Jewish Museum is truly an inspiring and captivating place.</p>
+                <p><strong>Cost (based on tours):</strong></p>
+                <ul class="cost">
+                    <li>$100 for up to 5 people</li>
+                    <li>$200 for up to 15 people</li>
+                    <li>$15/person for more than 15 people</li>
+                </ul>
+                <p><strong>Hours:</strong> 9 a.m. to 5 p.m. daily</p>
+                <p><strong>Policies: </strong>N/A</p>
+                <a id="archives"></a>
+                <p><strong>Address:</strong></p>
+                <ul class="cost">
+                    <li>Archives: 2401 Foxhall Rd NW, Washington, DC 20007</li>
+                    <li>Synagogue: 701 Third Street NW Washington, DC 20001-2624</li>
+                </ul>
+                <p><strong><a class="link" href="https://www.jhsgw.org/" target="blank">More Information Here</a></strong></p>
+                <hr>
+
+                <img class="img-museum" src="images-cited/museums/national-archives.jpg" alt="Archives" title="National Archives Museum">
+                <p class="museum">National Archives Museum</p>
+                <p>Holding thousands of records from America's past, the National Archives Museum is extremely significant to our nation today. With documents such as the Declaration of Independence and the Constitution, this is one museum you will want to visit.</p>
+                <p><strong>Cost:</strong> Online reservation are $1.50 per person, but if you do no reserve online, admission is FREE.</p>
+                <p><strong>Hours:</strong> 8:45 a.m. to 5:45 p.m. Monday-Friday, Closed Saturday-Sunday</p>
+                <p><strong>Policies: </strong>Photography is prohibited.</p>
+                <a id="bonsai"></a>
+                <p><strong>Address:</strong> 701 Constitution Ave NW, Washington, DC 20408</p>
+                <p><strong><a class="link" href="https://museum.archives.gov" target="blank">More Information Here</a></strong></p>
+                <hr>
+
+                <img class="img-museum" src="images-cited/museums/bonsai.jpg" alt="Bonsai and Penjing" title="National Bonsai and Penjing Museum">
+                <p class="museum">National Bonsai and Penjing Museum</p>
+                <p>Interested in exotic plants? Visit the National Bonsai and Penjing Museum, where you can learn about Asian culture while viewing these beautiful little trees.</p>
+                <p><strong>Cost:</strong> FREE</p>
+                <p><strong>Hours:</strong> 10 a.m. to 4 p.m. daily</p>
+                <p><strong>Policies: </strong>N/A</p>
+                <a id="building"></a>
+                <p><strong>Address:</strong> 3501 New York Ave NE, Washington, DC 20002</p>
+                <p><strong><a class="link" href="https://www.bonsai-nbf.org/" target="blank">More Information Here</a></strong></p>
+                <hr>
+
+                <img class="img-museum" src="images-cited/museums/national-building.jpg" alt="National Building Museum" title="National Building Museum">
+                <p class="museum">National Building Museum</p>
+                <p>With fun activities and exhibits for everyone, the National Building Museum is a must-see on any visit to Washington D.C. Learn about secret cities and the history of homebuilding and architecture in America.</p>
+                <p><strong>Cost:</strong></p>
+                <ul class="cost">
+                    <li>$7 for students, youth 13-17, and seniors 60+</li>
+                    <li>$10 for adults</li>
+                </ul>
+                <p><strong>Hours:</strong> 10 a.m. to 5 p.m. Monday-Saturday, 11 a.m. to 5 p.m. Sunday</p>
+                <p><strong>Policies: </strong>N/A</p>
+                <a id="national-gallery"></a>
+                <p><strong>Address:</strong> 401 F St NW, Washington, DC 20001</p>
+                <p><strong><a class="link" href="https://www.nbm.org" target="blank">More Information Here</a></strong></p>
+                <hr>
+
+                <img class="img-museum" src="images-cited/museums/national-gallery.jpg" alt="National Gallery" title="National Gallery of Art">
+                <p class="museum">National Gallery of Art</p>
+                <p>Come to the National Gallery of Art to experience exhibits from a wide variety of artists from around the globe. From renaissance Italy to the American 1900s, this museum has art that everyone will enjoy.</p>
+                <p><strong>Cost:</strong> FREE</p>
+                <p><strong>Hours:</strong> 10 a.m. to 5 p.m. Monday-Saturday, 11 a.m. to 6 p.m. Sunday</p>
+                <p><strong>Policies: </strong></p>
+                <ul class="cost">
+                    <li>Do not touch anything in the galleries.</li>
+                    <li>Food and drink is permitted in the gallery cafes only.</li>
+                    <li>Monopods, selfie sticks, and tripods are not permitted.</li>
+                    <li>Talking on cellular phones in the galleries or auditorium is prohibited.</li>
+                </ul>
+                <a id="geographic"></a>
+                <p><strong>Address:</strong> Constitution Ave NW, Washington, DC 20565</p>
+                <p><strong><a class="link" href="https://www.nga.go" target="blank">More Information Here</a></strong></p>
+                <hr>
+
+                <img class="img-museum" src="images-cited/museums/national-geographic.jpg" alt="National Geographic Museum" title="National Geographic Museum">
+                <p class="museum">National Geographic Museum</p>
+                <p>Love National Geographic magazine? Consider dropping by National Geographic Museum, where you can explore all sorts of various exhibits, ranging from National Geographic's origin to their rotating magazine-based pieces.</p>
+                <p><strong>Cost:</strong></p>
+                <ul class="cost">
+                    <li>$12.50 for adults (ages 13-61)</li>
+                    <li>$10 for seniors (ages 62+)</li>
+                    <li>$9 for youth (ages 5-12)</li>
+                </ul>
+                <p><strong>Hours:</strong> 10 a.m. to 6 p.m. daily</p>
+                <p><strong>Policies: </strong> Strollers and food and drink are prohibited in the museum.</p>
+                <a id="jewish-military"></a>
+                <p><strong>Address:</strong> 1145 17th St NW, Washington, DC 20036</p>
+                <p><strong><a class="link" href="https://www.nationalgeographic.org/" target="blank">More Information Here</a></strong></p>
+                <hr>
+
+                <img class="img-museum" src="images-cited/museums/american-jewish.jpeg" alt="Jewish Military History" title="National Museum of American Jewish Military History">
+                <p class="museum">National Museum of American Jewish Military History</p>
+                <p>Learn about the role of Jewish Americans in American wars by stopping by the National Museum of American Jewish Military History, and pay respect to those who were willing to sacrifice their lives for the greater good.</p>
+                <p><strong>Cost:</strong> FREE</p>
+                <p><strong>Hours:</strong> 9 a.m. to 5 p.m. Monday-Friday, Closed Saturday-Sunday</p>
+                <p><strong>Policies: </strong>N/A</p>
+                <a id="women-arts"></a>
+                <p><strong>Address:</strong> 1811 R St NW, Washington, DC 20009</p>
+                <p><strong><a class="link" href="https://nmajmh.org/" target="blank">More Information Here</a></strong></p>
+                <hr>
+
+                <img class="img-museum" src="images-cited/museums/womenarts.jpeg" alt="National Women Art" title="National Museum of Women in the Arts">
+                <p class="museum">National Museum of Women in the Arts</p>
+                <p>Want to support women? Stop by the world's only museum dedicated solely to supporting women and their artistic abilities at the National Museum of Women in the Arts.</p>
+                <p><strong>Cost:</strong></p>
+                <ul class="cost">
+                    <li>$10 for adults</li>
+                    <li>$8 for seniors (65+) and students</li>
+                    <li>FREE for NMWA members and youth 18 and under</li>
+                </ul>
+                <p><strong>Hours:</strong> 10 a.m. to 5 p.m. Monday-Saturday, 12 noon to 5 p.m. Sunday</p>
+                <p><strong>Policies:</strong></p>
+                <ul class="cost">
+                    <li>Flash photography, tripods, selfie sticks, extension cords, and other special equipment are not permitted. Photography of special exhibitions or works of art on loan to the museum is generally permitted unless otherwise noted. Works in the museum's collection may be photographed with available light for personal, noncommercial use.</li>
+                    <li>Food and drink are not permitted in the galleries or Performance Hall. Drinking fountains are located by the restrooms.</li>
+                    <li>Do not touch the art.</li>
+                </ul>
+                <a id="newseum"></a>
+                <p><strong>Address:</strong> 1250 New York Ave NW, Washington, DC 20005</p>
+                <p><strong><a class="link" href="https://nmwa.org" target="blank">More Information Here</a></strong></p>
+                <hr>
+
+                <img class="img-museum" src="images-cited/museums/newseum.jpg" alt="Newseum" title="Newseum">
+                <p class="museum">Newseum</p>
+                <p>Want to become a reporter someday? Visit the Newseum, where one can experience the life of a reporter firsthand, and explore the history of news and its impact on US history. It contains exhibits such as the NBC News Interactive Room, where visitors experience the actions of a reporter firsthand, and the Berlin Wall Gallery, which displays real life pieces of the Berlin Wall.</p>
+                <p><strong>Cost:</strong>
+                    <ul class="cost">
+                        <li>$24.95 + tax for adults</li>
+                        <li>$19.95 + tax for seniors</li>
+                        <li>$14.95 + tax for youth</li>
+                        <li>FREE for children</li>
+                    </ul>
+                    <p><strong>Hours:</strong> 9 a.m. to 5 p.m. Monday-Saturday, 10 a.m. to 5 p.m. Sunday</p>
+                    <p><strong>Policies:</strong></p>
+                    <ul class="cost">
+                        <li>Photography without flash and digital filming with smartphones or tablets are encouraged in most parts of the Newseum. Please make sure the flash is turned off when taking any photos to protect the artifacts. Photography and filming of any kind are not allowed in the News Corp. News History Gallery and Newseum theaters. When sharing your photos online, be sure to include #newseum.</li>
+                        <li>Only service animals are allowed inside the building.</li>
+                        <li>Smoking weapons, and outside food and drink are prohibited.</li>
+                        <li>Posters, signs or placards with attached handles and/or larger than 11" x 15" are not permitted. Banners of any size are prohibited without prior approval from the Newseum. Solicitation is strictly prohibited</li>
+                    </ul>
+                    <a id="textile"></a>
+                    <p><strong>Address:</strong> 555 Pennsylvania Ave NW, Washington, DC 20001</p>
+                    <p><strong><a class="link" href="http://www.newseum.org/visit/" target="blank">More Information Here</a></strong></p>
+                    <hr>
+
+                    <img class="img-museum" src="images-cited/museums/textile.jpeg" alt="Textile Museum" title="Textile Museum">
+                    <p class="museum">Textile Museum</p>
+                    <p>Interested in culture and it's expression? Visit the Textile Museum, home to thousands of interesting cloth works, all ranging from hundreds of different cultures across the world.</p>
+                    <p><strong>Cost:</strong> $8 general admission</p>
+                    <p><strong>Hours:</strong> </p>
+                    <ul class="cost">
+                        <li>11 a.m. to 5 p.m. Monday</li>
+                        <li>Closed Tuesday</li>
+                        <li>11 a.m. to 7 p.m. Wednesday-Thursday</li>
+                        <li>11 a.m. to 5 p.m. Friday</li>
+                        <li>10 a.m. to 5 p.m. Saturday</li>
+                        <li>1 p.m. to 5 p.m. Sunday</li>
+                    </ul>
+                    <p><strong>Policies: </strong>N/A</p>
+                    <a id="phillips"></a>
+                    <p><strong>Address:</strong> 701 21st St NW, Washington, DC 20052</p>
+                    <p><strong><a class="link" href="https://museum.gwu.edu/" target="blank">More Information Here</a></strong></p>
+                    <hr>
+
+                    <img class="img-museum" src="images-cited/museums/phillips.jpeg" alt="Phillips" title="The Phillips Collection">
+                    <p class="museum">The Phillips Collection</p>
+                    <p>Stop by the Phillips Collection to see a bountiful array of artwork, ranging from Vincent Van Gogh to Nordic impressions. Explore these beautiful pieces while enjoying this intimate setting.</p>
+                    <p><strong>Cost:</strong></p>
+                    <ul class="cost">
+                        <li>Permanent Collection Galleries:</li>
+                        <li style="list-style-type: none">
+                            <ul>
+                                <li>FREE Tuesday-Friday</li>
+                                <li>$10 for adults and FREE for visitors 18 and under Saturday-Sunday</li>
+                            </ul>
+                        </li>
+                        <li>Ticketed Exhibitions</li>
+                        <li style="list-style-type: none">
+                            <ul>
+                                <li>$12 for adults</li>
+                                <li>$10 for students</li>
+                                <li>FREE for visitors 18 and under</li>
+                            </ul>
+                        </li>
+                    </ul>
+                    <p><strong>Hours:</strong></p>
+                    <ul class="cost">
+                        <li>10 a.m. to 5 p.m. Tuesday-Saturday with hours extended to 8:30 p.m. on Thursdays</li>
+                        <li>12 noon to 6:30 p.m. Sunday</li>
+                        <li>Closed Monday</li>
+                    </ul>
+                    <p><strong>Policies: </strong>N/A</p>
+                    <a id="wilderness"></a>
+                    <p><strong>Address:</strong> 1600 21st St NW, Washington, DC 20009</p>
+                    <p><strong><a class="link" href="https://www.phillipscollection.org" target="blank">More Information Here</a></strong></p>
+                    <hr>
+
+                    <img class="img-museum" src="images-cited/museums/wilderness.jpg" alt="Wilderness Society" title="The Wilderness Society Gallery">
+                    <p class="museum">The Wilderness Society Gallery</p>
+                    <p>The world and its environment is the one thing we all have in common. Visit the Wilderness Society Gallery to view breathtaking photographs by Ansel Adams and support their efforts to improve environmental protections.</p>
+                    <p><strong>Cost:</strong> FREE</p>
+                    <p><strong>Hours:</strong></p>
+                    <ul class="cost">
+                        <li>10 a.m. to 4 p.m. Monday-Thursday</li>
+                        <li>10 a.m. to 2 p.m. Friday</li>
+                        <li>Closed Saturday-Sunday</li>
+                    </ul>
+                    <p><strong>Policies: </strong>N/A</p>
+                    <a id="navy"></a>
+                    <p><strong>Address:</strong> 3258, 1615 M St NW #2, Washington, DC 20036</p>
+                    <p><strong><a class="link" href="https://www.wilderness.org/" target="blank">More Information Here</a></strong></p>
+                    <hr>
+
+                    <img class="img-museum" src="images-cited/museums/navy.jpg" alt="Navy Museum" title="U.S. Navy Museum">
+                    <p class="museum">U.S. Navy Museum</p>
+                    <p>Interested in the Navy? Want to learn about the role they play in U.S. military efforts? Drop by the U.S. Navy Museum and pay tribute to those who work to bring peace.</p>
+                    <p><strong>Cost:</strong> FREE, but must have a valid photo ID</p>
+                    <p><strong>Hours:</strong> </p>
+                    <ul class="cost">
+                        <li>9 a.m. to 4 p.m. Monday-Friday</li>
+                        <li>10 a.m. to 4 p.m. Saturday</li>
+                        <li>Closed Sunday</li>
+                    </ul>
+                    <p><strong>Policies: </strong>All visitors must have a valid photo ID.</p>
+                    <a id="holocaust"></a>
+                    <p><strong>Address:</strong> 736 Sicard St SE, Washington, DC 20374</p>
+                    <p><strong><a class="link" href="https://www.history.navy.mil/content/history/museums/nmusn.html" target="blank">More Information Here</a></strong></p>
+                    <hr>
+
+                    <img class="img-museum" src="images-cited/museums/holocaust.jpg" alt="Holocaust Memorial" title="United States Holocaust Memorial Museum">
+                    <p class="museum">United States Holocaust Memorial Museum</p>
+                    <p>The Holocaust, while a dark time in the world's history, is truly a necessary age that needs to be explored. By visiting the U.S. Holocaust Memorial Museum, you can explore this firsthand, from the impact of the U.S. during the time, to the memorialization of those who lost their lives during this time.</p>
+                    <p><strong>Cost:</strong> FREE</p>
+                    <p><strong>Hours:</strong> 10 a.m. to 5:20 p.m. daily</p>
+                    <p><strong>Policies: </strong></p>
+                    <ul class="cost">
+                        <li>Food and drink are prohibited (bottled water is permitted).</li>
+                        <li>Smoking is prohibited within 25 feet of museum entrances.</li>
+                        <li>Protesting or demonstrating is prohibited.</li>
+                        <li>Pets are prohibited.</li>
+                        <li>Photographs can be taken for advertising or commercial use.</li>
+                    </ul>
+                    <a id="women-democratic"></a>
+                    <p><strong>Address:</strong> 100 Raoul Wallenberg Pl SW, Washington, DC 20024</p>
+                    <p><strong><a class="link" href="https://www.ushmm.org" target="blank">More Information Here</a></strong></p>
+                    <hr>
+
+                    <img class="img-museum" src="images-cited/museums/islamic.jpg" alt="Women's National Democratic Museum" title="Women's National Democratic Museum">
+                    <p class="museum">Women's National Democratic Museum</p>
+                    <p>Looking to learn more about Islam? Visit America's Islamic Heritage Museum, one of four major museums dedicated to this religion in the United States. Learn about the legacies left behind by some of the world's most influential people and expand your knowledge of one of the five major world religions.</p>
+                    <p><strong>Cost:</strong>
+                        <ul class="cost">
+                            <li>$7 for adults</li>
+                            <li>$5 for students and seniors</li>
+                        </ul>
+                        <p><strong>Hours:</strong></p>
+                        <ul class="cost">
+                            <li>11 a.m. to 5 p.m. Tuesday-Saturday</li>
+                            <li>12 noon to 4 p.m. Sunday</li>
+                            <li>Closed Monday</li>
+                        </ul>
+                        <p><strong>Policies: </strong></p>
+                        <ul class="cost">
+                            <li>Backpacks, other totes and extra-large purses are not permitted but may be stored in the coatroom.</li>
+                            <li>No children under 10 years of age.</li>
+                            <li>Flash photography of paintings is prohibited.</li>
+                        </ul>
+                        <p><strong>Address:</strong> 2315 Martin Luther King Jr Ave SE, Washington, DC 20020</p>
+                        <p><strong><a class="link" href="https://democraticwoman.org/art-exhibitsmuseum/current-exhibitions/" target="blank">More Information Here</a></strong></p>
+                        <br>
+
+                        <div class="footer">
+                            <br>
+                            <p class="foot-text">This website was proudly created for the 2018-19 Business Professionals of America Website Design Team Competition. The prompt for this year was to develop a website to assist BPA chapters in planning their attendance at NLC in Washington D.C. If you would like to view Business Professionals of America's social media or contact our chapter, please use the buttons below.</p>
+                            <br>
+                            <div class="social-media">
+                                <div class='btn btn-one'>
+                                    <a href="https://www.facebook.com/businessprofessionalsofamerica/"><i class='fa fa-facebook'></i></a>
+                                </div>
+                                <div class='btn btn-two'>
+                                    <a href="https://twitter.com/National_BPA"><i class='fa fa-twitter'></i></a>
+                                </div>
+                                <div class='btn btn-three'>
+                                    <a href="mailto:huron.bpa@gmail.com"><i class='fa fa-envelope'></i></a>
+                                </div>
+                            </div>
+                        </div>
+
+                        <script>
+                            $(function() {
+                                var shrinkHeader = 550;
+                                $(window).scroll(function() {
+                                    var scroll = getCurrentScroll();
+                                    if (scroll >= shrinkHeader) {
+                                        $('header').addClass('shrink');
+                                    } else {
+                                        $('header').removeClass('shrink');
+                                    }
+                                });
+
+                                function getCurrentScroll() {
+                                    return window.pageYOffset || document.documentElement.scrollTop;
+                                }
+                            });
+                        </script>
+
+                        <script>
+                            jQuery(document).ready(function($) {
+                                $(".menu-item-has-children").append("<div class='open-menu-link open'>+</div>");
+                                $('.menu-item-has-children').append("<div class='open-menu-link close'>-</div>");
+
+                                $('.open').addClass('visible');
+
+                                $('.open-menu-link').click(function(e) {
+                                    var childMenu = e.currentTarget.parentNode.children[1];
+                                    if ($(childMenu).hasClass('visible')) {
+                                        $(childMenu).removeClass("visible");
+
+                                        $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+                                        $(e.currentTarget.parentNode.children[2]).addClass("visible");
+                                    } else {
+                                        $(childMenu).addClass("visible");
+
+                                        $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+                                        $(e.currentTarget.parentNode.children[3]).addClass("visible");
+                                    }
+                                });
+                            });
+                        </script>
+
+                        <script>
+                            window.onscroll = function() {
+                                scrollFunction()
+                            };
+
+                            function scrollFunction() {
+                                if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                                    document.getElementById("myBtn").style.display = "block";
+                                } else {
+                                    document.getElementById("myBtn").style.display = "none";
+                                }
+                            }
+
+                            // When the user clicks on the button, scroll to the top of the document
+                            function topFunction() {
+                                document.body.scrollTop = 300;
+                                document.documentElement.scrollTop = 300;
+                            }
+                        </script>
+</body>
+
+</html>

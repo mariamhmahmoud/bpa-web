@@ -1,0 +1,1063 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Guide to Washington DC, DC, Washington, NLC, 2020, BPA, Business Professionals of America, government">
+
+    <!--required for hamburger menu-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>Government Buildings</title>
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Muli');
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        .mission {
+            font-size: 20px;
+            color: black;
+            font-family: 'Muli';
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+            margin-top: 5%;
+            line-height: 2.0;
+        }
+        
+        .toppage {
+            box-sizing: border-box;
+            background: url("images-cited/whitehouse.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            min-width: 250px;
+            color: #fff;
+            padding-top: 112px;
+            letter-spacing: 2px;
+            font-family: "Montserrat", sans-serif;
+        }
+        
+        .text {
+            font-size: 50px;
+            font-weight: bold;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-family: "Muli";
+            text-align: center;
+            margin-top: 500px;
+            color: white;
+        }
+        /*navigation*/
+        
+        .navigation {
+            text-align: center;
+            width: 100%;
+            font-family: 'Muli';
+            padding: 5px;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            padding: 22px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 15px;
+            margin-top: .5%;
+        }
+        
+        .navigation a:hover {
+            color: #ffffb2;
+            transition: all .5s ease;
+        }
+        
+        .attract-drop {
+            display: none;
+            position: absolute;
+            background-color: white;
+            color: black;
+        }
+        
+        .attract-drop a {
+            color: black;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .attract-drop a:hover {
+            color: black;
+        }
+        
+        .dropdown-content a:hover {
+            color: none;
+            background-color: lightgrey;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown:hover .attract-drop {
+            display: block;
+        }
+        
+        @media screen and (max-width:1200px) {
+            .navigation {
+                text-align: left;
+            }
+            /*end*/
+        }
+        
+        hr {
+            width: 90%;
+        }
+        
+        header {
+            position: fixed;
+            top: 0px;
+            height: 75px;
+            -webkit-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            width: 100%;
+            padding: 15px 75px 15px 35px;
+            text-align: right;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        header.shrink {
+            background-color: #222;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        .top-box {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            margin-top: 550px;
+            bottom: 0px;
+            opacity: .5;
+        }
+        
+        .logo {
+            float: left;
+            display: inline-block;
+            padding: 30px;
+            color: white;
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: 'Muli';
+            padding-right: 0px;
+        }
+        
+        .card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            width: 100%;
+            height: 250px;
+            margin-left: 2%;
+            margin-right: 2%;
+            text-align: left;
+            position: inherit;
+            margin-bottom: 2%;
+            color: black;
+            font-family: "Muli";
+            overflow-y: scroll;
+            overflow-x: hidden;
+            float: left;
+            line-height: 1.8;
+        }
+        
+        .card-text {
+            margin-top: 150px;
+            font-size: 35px;
+            color: white;
+        }
+        
+        #second {
+            background-color: #F6F6E5;
+        }
+        
+        #two {
+            color: black;
+        }
+        
+        #third {
+            background-color: #7C0A02;
+            width: 25%;
+        }
+        
+        .image-card {
+            box-shadow: 0 4px 8px 0 rgba(0, 0, 0, 0.2);
+            background-image: url(images/washington-dc-monuments.jpg);
+            width: 30%;
+            height: 350px;
+            margin-left: 5%;
+            text-align: center;
+            display: inline-block;
+            position: inherit;
+            margin-bottom: 2%;
+            color: black;
+            font-family: "Muli";
+            margin-top: 5%;
+        }
+        
+        @media screen and (max-width: 800px) {
+            .outer-foot {
+                height: 450px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .outer-foot {
+                height: 550px;
+            }
+            .text {
+                font-size: 35px;
+                margin-top: 100px;
+                ;
+            }
+        }
+        /*Hamburger*/
+        
+        #menuToggle {
+            display: hidden;
+            position: relative;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+            margin-top: 36px;
+        }
+        
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+        }
+        
+        #menuToggle span {
+            display: hidden;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: white;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+        }
+        /*Transform hamburger icon*/
+        
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+        
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+        
+        #menuToggle input:checked ~ span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+        
+        #menu {
+            position: absolute;
+            width: 100%;
+            margin: -100px 0 0 -50px;
+            padding: 50px;
+            padding-top: ;
+            background: white;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            text-align: left;
+            padding-top: 110px;
+        }
+        
+        #menu li {
+            padding: 10px 0;
+            font-size: 22px;
+            color: black;
+            font-family: 'Muli';
+            font-weight: bold;
+        }
+        
+        #menu a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #menuToggle input:checked ~ ul {
+            transform: none;
+        }
+        
+        @media screen and (max-width: 1360px) {
+            .navigation {
+                display: none;
+            }
+            .logo {
+                float: right;
+                margin-right: 9%;
+            }
+            #menuToggle {
+                display: block;
+            }
+            #menuToggle span {
+                display: block;
+            }
+        }
+        
+        p {
+            margin-left: 5%;
+            margin-right: 50%;
+            font-family: 'Muli';
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .museum {
+            font-weight: bold;
+            font-size: 23px;
+        }
+        
+        .img-museum {
+            float: right;
+            width: 30%;
+            margin-right: 10%;
+            top: 0px;
+            margin-bottom: 2%;
+            margin-top: 2%;
+        }
+        
+        @media screen and (max-width: 950px) {
+            .img-museum {
+                display: none;
+            }
+            .cost {
+                width: 50%;
+            }
+            p {
+                margin-right: 5%;
+            }
+        }
+        
+        li .sub-menu {
+            display: none;
+            list-style-type: none;
+            color: black;
+        }
+        
+        .visible {
+            display: inline !important;
+            margin-left: 3px;
+            margin-bottom: 3px;
+        }
+        
+        .open-menu-link {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        .sub-menu li a {
+            font-size: 18px;
+            text-align: left;
+        }
+        
+        .menu-item-has-children a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .cost {
+            list-style-type: inherit;
+            margin-left: 5%;
+            margin-right: 45%;
+            font-family: 'Muli';
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .footer {
+            background-color: #363958;
+            height: 200px;
+            margin-bottom: 0px;
+            margin-top: 50px;
+            width: 100%;
+        }
+        
+        .foot-text {
+            color: white;
+            font-family: 'Muli';
+            font-size: 16px;
+            margin-left: 3%;
+            margin-right: 3%;
+            float: left;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        .btn a {
+            height: 40px;
+            width: 40px;
+            display: inline-block;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+            cursor: pointer;
+            clear: none;
+            display: inline-block;
+            box-shadow: 0 0 0 2px #fff;
+            -webkit-transition: all .15s ease;
+            transition: all .15s ease;
+        }
+        
+        .btn .fa {
+            padding: 0;
+            display: inline-block;
+            margin-right: -1px;
+        }
+        
+        .btn a,
+        .fa a {
+            display: inline-block;
+            color: #fff;
+            font-size: 20px;
+        }
+        
+        .btn.btn-one a:hover {
+            box-shadow: 0 0 0 4px #3b5998;
+            color: #3b5998;
+        }
+        
+        .btn-one {
+            margin-left: -55px;
+        }
+        
+        .btn-two {
+            margin-top: -40px;
+            margin-left: 0px;
+        }
+        
+        .btn.btn-two a:hover {
+            box-shadow: 0 0 0 4px #00aced;
+            color: #00aced;
+        }
+        
+        .btn-three {
+            margin-top: -40px;
+            margin-left: 55px;
+        }
+        
+        .btn.btn-three a:hover {
+            box-shadow: 0 0 0 4px #b2f2ff;
+            color: #b2f2ff;
+        }
+        
+        .social-media {
+            display: inline-block;
+            margin-left: 50%;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .footer {
+                height: 270px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .text {
+                font-size: 35px;
+                margin-top: 100%;
+            }
+        }
+        
+        #myBtn {
+            display: none;
+            height: 50px;
+            width: 50px;
+            position: fixed;
+            bottom: 20px;
+            right: 30px;
+            z-index: 99;
+            font-size: 18px;
+            border: none;
+            outline: none;
+            background-color: #7C0A02;
+            color: white;
+            cursor: pointer;
+            padding: 15px;
+            border-radius: 50px;
+        }
+        
+        #credit {
+            font-size: 12px;
+            margin-top: 0%;
+            margin-left: 2%;
+            text-align: center;
+            margin: 0 auto;
+        }
+        
+        .price-filter {
+            margin-left: 5%;
+            font-family: 'Muli';
+            line-height: 1.8;
+        }
+        
+        .name {
+            text-decoration: none;
+            color: #363958;
+        }
+        
+        .name:hover {
+            color: #7C0A02;
+            transition: 0.2s;
+        }
+        
+        .name:visited {
+            color: #7C0A02;
+        }
+        
+        .link {
+            text-decoration: none;
+            font-size: 18px;
+            font-weight: bold;
+            color: #7C0A02;
+        }
+        
+        @media screen and (max-width: 620px) {
+            .text {
+                font-size: 35px;
+                margin-top: 100%;
+            }
+            p {
+                font-size: 14px;
+            }
+            .mission {
+                font-size: 18px;
+            }
+            #credit {
+                margin-left: 5%;
+                margin-right: 5%;
+                font-size: 10px;
+            }
+            .footer {
+                height: 290px;
+            }
+            .logo {
+                font-size: 17.5px;
+                margin-right: 15%;
+            }
+            .foot-text {
+                font-size: 14px;
+            }
+            .social-media {
+                margin-left: 45%;
+            }
+            .mission {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .museum {
+                font-size: 15px;
+            }
+            .cost {
+                font-size: 13px;
+                margin-right: 5%;
+            }
+            #menu li {
+                font-size: 18px;
+            }
+            .link {
+                font-size: 14px;
+            }
+        }
+        
+        @media handheld,
+        only screen and (max-width: 668px) {
+            .toppage {
+                background-attachment: scroll !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">BPA GUIDE TO WASHINGTON DC</div>
+        <div class="navigation">
+            <a href="index.html">HOME</a>
+            <a href="transportation.html">TRANSPORTATION</a>
+            <a href="food.html">FOOD</a>
+            <div class="dropdown">
+                <a href="attractions.html">ATTRACTIONS</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="museum-non-smith.html">MUSEUMS</a>
+                    <hr>
+                    <a href="gov.html">GOVERNMENT BUILDINGS</a>
+                    <hr>
+                    <a href="parks.html">NATIONAL PARKS</a>
+                    <hr>
+                    <a href="monuments.html">MONUMENTS & MEMORIALS</a>
+                    <hr>
+                    <a href="smithsonian.html">SMITHSONIAN</a>
+                </div>
+            </div>
+            <a href="attire.html">ATTIRE</a>
+            <a href="map.html">MAP</a>
+            <div class="dropdown">
+                <a href="more.html">MORE</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="planner.html">TRIP PLANNER</a>
+                    <hr>
+                    <a href="about-us.html">ABOUT THE DEVELOPERS</a>
+                    <hr>
+                    <a href="resources.html">RESOURCES</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Hidden until certain screen size-->
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <li><a href="index.html">
+                    HOME
+                   </a></li>
+                <li><a href="transportation.html">
+                    TRANSPORTATION
+                   </a></li>
+                <li><a href="food.html">
+                    FOOD</a></li>
+
+                <li class="menu-item-has-children"><a href="attractions.html">ATTRACTIONS</a>
+
+                    <ul class="sub-menu">
+                        <li><a href="museum-non-smith.html">MUSEUMS</a></li>
+                        <li><a href="gov.html">GOVERNMENT BUILDINGS</a></li>
+                        <li><a href="parks.html">NATIONAL PARKS</a></li>
+                        <li><a href="monuments.html">MONUMENTS AND MEMORIALS</a></li>
+                        <li><a href="smithsonian.html">SMITHSONIAN</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="attire.html">
+                    ATTIRE</a></li>
+                <li><a href="map.html">
+                    MAP</a></li>
+
+                <li class="menu-item-has-children"><a href="more.html">MORE</a>
+                    <ul class="sub-menu">
+                                                    <li><a href="planner.html">TRIP PLANNER</a></li>
+                        <li><a href="about-us.html">ABOUT THE DEVELOPERS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--Hidden end-->
+    </header>
+    <div class="toppage">
+        <p class="text">GOVERNMENT BUILDINGS</p>
+    </div>
+    <p id="credit">Photo Credit: "Washington Signature Tour." Royal USA Tours & Transportation INC., Rezdy, signaturetoursdc.rezdy.com/54580/washington-signature-tour-sedan?lang=nb.</p>
+
+    <ul class="price-filter">
+        <li><a class="name" href="#bureau-engraving">Bureau of Engraving and Printing</a></li>
+        <li><a class="name" href="#state">Department of State</a></li>
+        <li><a class="name" href="#eisenhower">Eisenhower Executive Office Building</a></li>
+        <li><a class="name" href="#fbi">Federal Bureau of Investigation</a></li>
+        <li><a class="name" href="#georgetown">Georgetown Station Post Office</a></li>
+        <li><a class="name" href="#congress">Library of Congress</a></li>
+        <li><a class="name" href="#yates">Sidney Yates Building</a></li>
+        <li><a class="name" href="#supreme-court">Supreme Court</a></li>
+        <li><a class="name" href="#pentagon">The Pentagon</a></li>
+        <li style="list-style-type: none">
+            <a id="bureau-engraving"></a>
+        </li>
+        <li><a class="name" href="#capitol">U.S. Capitol</a></li>
+        <li><a class="name" href="#treasury">United States Department of the Treasury</a></li>
+        <li><a class="name" href="#white-house">White House</a></li>
+    </ul>
+    <hr>
+
+    <button onclick="topFunction()" id="myBtn" title="Go to top"><i class="fa fa-caret-up"></i></button>
+
+    <img class="img-museum" src="images-cited/gov-buildings/engraving-printing.jpg" alt="bureau-engraving-printing" title="Bureau of Engraving and Printing">
+    <p class="museum">Bureau of Engraving and Printing</p>
+    <p>Want to see where money comes from? Stop by the U.S. Bureau of Engraving and Printing, where you can learn all about how U.S. currency is printed, and may even get the chance to see money being made!</p>
+    <p><strong>How to get a tour:</strong> Visit the Tour and Visitor Center. Tickets are distributed on a first-come basis. Group tours must be reserved in advance. Tours run every 30 minutes.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> </p>
+    <ul class="cost">
+        <li>Public Tours: 9 a.m. to 10:45 p.m. & 12:30 p.m. to 2:00 p.m. Monday-Friday</li>
+        <li>Group Tours (10-50 visitors): 11:00 a.m. to 12:15 p.m. Monday-Friday</li>
+        <li>Visitor Center Gift Shop (no ticket required) 8:30 a.m. to 2:45 p.m. September-March, 8:30 a.m. to 6:00 p.m. April through August</li>
+    </ul>
+    <p><strong>Security Measures:</strong></p>
+    <ul class="cost">
+        <li>All visitors must go through a security screening</li>
+        <li>Foods and drinks are prohibited</li>
+        <li>Strollers are not allowed on tour</li>
+        <li>Weapons are prohibited</li>
+    </ul>
+    <a id="state"></a>
+    <p><strong>Address:</strong> 301 14th St SW, Washington, DC 20228
+    </p>
+    <p><strong><a class="link" href="https://www.moneyfactory.gov" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/state-dep.jpg" alt="dept-state" title="Department of State">
+    <p class="museum">Department of State</p>
+    <p>Throughout a president's career, he or she is tasked with making many decisions on foreign policy issues, international affairs, and so much more. Visit the State Department, home to the president's advisers on such issues. </p>
+    <p><strong>How to get a tour:</strong> To visit the Eighth-floor Diplomatic Reception Rooms, reservations need to be made up to 90 days in advance. Tours are offered Monday-Friday at 9:30 a.m., 10:30 a.m., and 2:45 p.m and are 45 minutes long. In order to enter the building, visitors need to check in at the information desk inside the C Street entrance (be sure to bring photo identification). A Department employee will be with you at all times during your visit.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 8:15 a.m. to 5:00 p.m. Monday-Friday, Closed Saturday-Sunday</p>
+    <p><strong>Security Measures:</strong></p>
+    <ul class="cost">
+        <li>Strollers are prohibited</li>
+        <li>Bring photo identification</li>
+    </ul>
+    <p><strong>Address:</strong> 2201 C St NW, Washington, DC 20520</p>
+    <p><strong><a class="link" href="https://www.state.gov" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/eisenhower.jpg" alt="eisenhower" title="Eisenhower Executive Office Building">
+    <p class="museum">Eisenhower Executive Office Building</p>
+    <p>We often only see the President as the leader of the nation, but there's a lot more going on behind the scenes than meets the eye. Stop by the Eisenhower Executive Office Building to visit the White House staff offices, and learn about the people working backstage in the Executive Branch.</p>
+    <p><strong>How to get a tour:</strong> Since this is part of the White House, you must get a tour of the White House to tour the Eisenhower Executive Office Building.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 24 hours daily</p>
+    <p><strong>Security Measures:</strong> N/A</p>
+    <a id="fbi"></a>
+    <p><strong>Address:</strong> 1650 Pennsylvania Ave NW, Washington, DC 20502</p>
+    <p><strong><a class="link" href="https://www.whitehouse.gov/about-the-white-house/eisenhower-executive-office-building/" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/fbi.jpg" alt="fbi" title="Federal Bureau of Investigation">
+    <p class="museum">Federal Bureau of Investigation</p>
+    <p>Ever wanted a look into the how the United States enforces national security? Visit the U.S. Federal Bureau of Investigation, where you can tour interactive multimedia exhibits, content, and artifacts from real FBI cases. Gain some insight into the FBI's history and operations, and learn about how it protects our nation.</p>
+    <p><strong>How to get a tour:</strong> Tours must be requested through your Congressional Office ahead of time (between 4 weeks-5 months) and all visitors must be U.S. citizens or green card holders.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 9 a.m. to 3 p.m. Monday-Friday, Closed Saturday-Sunday</p>
+    <p><strong>Security Measures:</strong></p>
+    <ul class="cost">
+        <li>The following are prohibited:</li>
+        <li style="list-style-type: none">
+            <ul class="cost">
+                <li>Backpacks, diaper bags, fanny packs, briefcases, luggage, computer and camera bags, or bags and purses larger than a clutch</li>
+                <li>Point-and-shoot cameras, SLR cameras, or video recorders (cell phone cameras are permitted)</li>
+                <li>Strollers</li>
+                <li>Food, beverages, tobacco products, personal grooming items (e.g. makeup, lotion, etc.)</li>
+                <li>Any pointed objects</li>
+                <li>Aerosol containers</li>
+                <li style="list-style-type: none">
+                </li>
+
+                <li>Guns, ammunition, fireworks, electric stun guns, mace, martial arts weapons/devices, or any knives</li>
+            </ul>
+        </li>
+    </ul>
+    <a id="georgetown"></a>
+    <p><strong>Address:</strong> 935 Pennsylvania Ave NW, Washington, DC 20535</p>
+    <p><strong><a class="link" href="https://www.fbi.gov/" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/georgetown-post.jpg" alt="georgetown-post" title="Georgetown Station Post Office">
+    <p class="museum">Georgetown Station Post Office</p>
+    <p>A beautiful piece of architecture and still functioning post office, The Georgetown Station Post Office is great if you're looking for a relaxing and quick sightseeing adventure. Admire the beautiful stonework and purchase stamps while you're there!</p>
+    <p><strong>How to get a tour:</strong> No tours are offered.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 9 a.m. to 5 p.m. Monday-Saturday, Closed Sunday</p>
+    <p><strong>Security Measures: </strong>N/A</p>
+    <a id="congress"></a>
+    <p><strong>Address:</strong> 1215 31st St NW, Georgetown, Washington DC, DC 20007-3423</p>
+    <p><strong><a class="link" href="https://www.tripadvisor.com/Attraction_Review-g28970-d564531-Reviews-Georgetown_Station_Post_Office-Washington_DC_District_of_Columbia.html" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/library-congress.jpg" alt="library-congress" title="Library of Congress">
+    <p class="museum">Library of Congress</p>
+    <p>Love books? Come visit the Library of Congress, and you'll be visiting the largest library in the entire world. Explore millions of photographs, maps, newspapers, books, and manuscripts from throughout history.</p>
+    <p><strong>How to get a tour:</strong> Group tours of more than 10 people must be reserved in advance online. The Thomas Jefferson: The Man & His Ideas and Music and the Performing Arts exhibits only offer group tours. The Jefferson Building, Baseball Americana, and Echoes of the Great War Tour are offered to groups of any sizes. Tours of groups with less than 10 people are offered on a first come, first served basis. The following times are available tour times:</p>
+    <ul class="cost">
+        <li>Thomas Jefferson Building:</li>
+        <li style="list-style-type: none">
+            <ul class="cost">
+                <li>10:30 a.m., 11:30 a.m., 12:30 p.m., 1:30 p.m., 2:30 p.m., and 3:30 p.m. Monday-Friday</li>
+                <li>10:30 a.m., 11:30 a.m., 1:30 p.m., 2:30 p.m. Saturday</li>
+            </ul>
+        </li>
+        <li>Baseball Americana: 11 a.m. on Wednesdays, Thursdays, and Fridays and 1 p.m. on Saturday</li>
+        <li>Echoes of the Great War: 1 p.m. on Tuesdays, Thursdays, Fridays, and the first Saturday of the month</li>
+        <li>Thomas Jefferson: The Man and His Ideas and Music and the Performing Arts: Available upon request</li>
+    </ul>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 8:30 a.m. to 4:30 p.m. Monday-Saturday, Closed Sunday and all major holidays</p>
+    <p><strong>Security Measures:</strong></p>
+    <ul class="cost">
+        <li>Must pass through security screening</li>
+        <li>Weapons are prohibited</li>
+        <li>Open food and drink are not allowed in public areas</li>
+        <li style="list-style-type: none">
+        </li>
+
+        <li>Silence electronics</li>
+        <li>No flash photography</li>
+    </ul>
+    <a id="yates"></a>
+
+    <p><strong>Address:</strong> 101 Independence Ave SE, Washington, DC 20540</p>
+    <p><strong><a class="link" href="https://www.loc.gov" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/sidney-yates.jpg" alt="sidney-yates" title="Sidney Yates Building">
+    <p class="museum">Sidney Yates Building</p>
+    <p>Ever wonder where Smokey the Bear works? It's not in the forest, but in the Sidney Yates Building, home to the U.S. Forest Service. Tour the history of the Forest Service, and get the chance to meet Smokey yourself!</p>
+    <p><strong>How to get a tour:</strong> No tours available</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 9 a.m. to 5 p.m. Monday-Friday, Closed Saturday & Sunday </p>
+    <p><strong>Security Measures: </strong>N/A</p>
+    <a id="supreme-court"></a>
+
+    <p><strong>Address:</strong> 201 14th St SW, Washington, DC 20227</p>
+    <p><strong><a class="link" href="https://www.gsa.gov/real-estate/gsa-properties/visiting-public-buildings/sidney-r-yates-federal-building" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/supreme-court.jpg" alt="supreme-court" title="Supreme Court">
+    <p class="museum">Supreme Court</p>
+    <p>Want to see how laws are examined? How about how some of the inner structures of our government operate? Visit the U.S. Supreme Court, where you can tour the home of our Justices, who debate court cases and how the Constitution works. </p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>How to get a tour:</strong> Court sessions are open to the public. Visitors are able to view court sessions on a first come, first served basis.</p>
+    <p><strong>Hours:</strong> 9 a.m. to 5 p.m. Monday-Friday, Closed Saturday & Sunday </p>
+    <p><strong>Security Measures: </strong></p>
+    <ul class="cost">
+        <li>Be prepared to pass through security screening at your point of entry. All items must be screened in x-ray machines and all visitors will be asked to pass through metal detectors.</li>
+        <li>Please tour the building quietly, as working offices are adjacent to public hallways.</li>
+        <li>No photography or audio/video recording is allowed inside the courtroom.</li>
+        <li>Smoking is prohibited inside the building.</li>
+        <li>Consumption of food and beverages is permitted only in the cafeteria and vending machine alcove.</li>
+        <li>Touching of portraits, busts, or other artifacts on exhibit is strictly prohibited.</li>
+
+        <li>Any visitors unable to maintain proper behavior will be asked to leave by the Supreme Court Police.</li>
+    </ul>
+    <a id="pentagon"></a>
+
+    <p><strong>Address:</strong> 1 First St NE, Washington, DC 20543 </p>
+    <p><strong><a class="link" href="https://www.supremecourt.gov" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/pentagon.jpg" alt="pentagon" title="The Pentagon">
+    <p class="museum">The Pentagon</p>
+    <p>Our government does a lot to protect the nation. If you want to see it for yourself, visit the Pentagon, home of the U.S. Department of Defense. Here, you can learn all about the steps they take to keep the country safe.</p>
+    <p><strong>How to get a tour:</strong> Tours must be booked 14-90 days in advance. Public tours cannot exceed 60 people.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 9 a.m. to 3 p.m. Monday-Friday, Closed Saturday & Sunday</p>
+    <p><strong>Security Measures:</strong></p>
+    <ul class="cost">
+        <li>Adults must bring a photo ID</li>
+        <li>No photography allowed</li>
+        <li>Must pass through security screening</li>
+    </ul>
+    <a id="capitol"></a>
+    <p><strong>Address:</strong> Washington, DC 22202</p>
+    <p><strong><a class="link" href="https://pentagontours.osd.mil/" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/capitol.jpg" alt="capitol" title="U.S. Capitol">
+    <p class="museum">U.S. Capitol</p>
+    <p>Love politics? Explore the U.S. Capitol, where you can watch how our laws our made, the very basis of our government and see all the beautiful architecture and art scattered throughout the building.</p>
+    <p><strong>How to get a tour:</strong> Reserving a tour in advance is recommended, but it is not required. Same-day passes are available, but there could be a wait to get them. Groups of 15 or more should reserve a tour ahead of time <a href="https://tours.visitthecapitol.gov/CVC/#.W-3Yvy2ZNAZ">here</a>.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 8:30 a.m. to 4:30 p.m. Monday-Saturday, Closed Sunday, Thanksgiving Day, Christmas Day, New Year's Day, and Inauguration Day</p>
+    <p><strong>Security Measures:</strong></p>
+    <ul class="cost">
+        <li>The following are prohibited:</li>
+        <li style="list-style-type: none">
+            <ul class="cost">
+                <li>Foods and drinks</li>
+                <li>Aerosol containers</li>
+                <li>Non-aerosol spray (Prescriptions for medical needs are permitted.)</li>
+                <li>Any pointed object, e.g. knitting needles and letter openers (Pens and pencils are permitted.)</li>
+                <li>Any bag larger than 18" wide x 14" high x 8.5" deep</li>
+                <li>Weapons</li>
+            </ul>
+        </li>
+    </ul>
+    <a id="treasury"></a>
+
+    <p><strong>Address:</strong> First St SE, Washington, DC 20004
+    </p>
+    <p><strong><a class="link" href="https://www.visitthecapitol.gov" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/treasury.jpg" alt="treasury" title="United States Department of the Treasury">
+    <p class="museum">United States Department of the Treasury</p>
+    <p>Want to learn about how your taxes are used? Schedule a visit for the United States Department of the Treasury, where you can learn about taxes, how U.S. money is used, and more!</p>
+    <p><strong>How to get a tour:</strong> You must register a tour in advance with your Congressional Office.</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong>8 a.m. to 5 p.m. Monday-Friday, Closed Saturday-Sunday</p>
+    <p><strong>Security Measures:</strong></p>
+    <ul class="cost">
+        <li>Must have a photo ID, name, social security number, and date of birth at hand to enter</li>
+        <li>No strollers (no storage area onsite)</li>
+        <li>No backpacks (no storage area onsite)</li>
+        <li>No cameras - photography (still or video) is not permitted in the building</li>
+    </ul>
+    <a id="white-house"></a>
+
+    <p><strong>Address:</strong> 1500 Pennsylvania Ave NW, Washington, DC 20220</p>
+    <p><strong><a class="link" href="https://home.treasury.gov" target="blank">More Information Here</a></strong></p>
+    <hr>
+
+    <img class="img-museum" src="images-cited/gov-buildings/white-house.jpg" alt="white-house" title="White House">
+    <p class="museum">White House</p>
+    <p>Want to see where our President lives? Come see the White House, where you can explore the historic living space for our past presidents since the year 1800. Who knows - maybe you'll even catch a glimpse of the First Family!</p>
+    <p><strong>How to get a tour:</strong> Submit a request through your Member of Congress at least 21 days in advance (first come first serve basis)</p>
+    <p><strong>Cost:</strong> FREE</p>
+    <p><strong>Hours:</strong> 7:30 a.m. to 11:30 a.m. Tuesday through Thursday, 7:30 a.m. to 1:30 p.m. Fridays and Saturdays</p>
+    <p><strong>Security Measures:</strong></p>
+    <ul class="cost">
+        <li>The following are prohibited:</li>
+        <li style="list-style-type: none">
+            <ul class="cost">
+                <li>Video Recorders</li>
+                <li>Handbags, book bags, backpacks or purses</li>
+                <li>Food or beverages, tobacco products, personal grooming items (i.e. makeup, lotion, etc.)</li>
+                <li>Strollers</li>
+                <li>Any pointed objects</li>
+                <li>Aerosol containers</li>
+                <li>Weapons</li>
+            </ul>
+        </li>
+    </ul>
+    <ul class="cost">
+        <li>No flash photography</li>
+        <li>No use of cellphones</li>
+        <li>Need photo ID</li>
+    </ul>
+    <p><strong>Address:</strong> 1600 Pennsylvania Ave NW, Washington, DC 20500</p>
+    <p><strong><a class="link" href="https://www.whitehouse.gov" target="blank">More Information Here</a></strong></p>
+
+    <br>
+    <div class="footer">
+        <br>
+        <p class="foot-text">This website was proudly created for the 2018-19 Business Professionals of America Website Design Team Competition. The prompt for this year was to develop a website to assist BPA chapters in planning their attendance at NLC in Washington D.C. If you would like to view Business Professionals of America's social media or contact our chapter, please use the buttons below.</p>
+
+        <br>
+        <div class="social-media">
+            <div class='btn btn-one'>
+                <a href="https://www.facebook.com/businessprofessionalsofamerica/"><i class='fa fa-facebook'></i></a>
+            </div>
+            <div class='btn btn-two'>
+                <a href="https://twitter.com/National_BPA"><i class='fa fa-twitter'></i></a>
+            </div>
+            <div class='btn btn-three'>
+                <a href="mailto:huron.bpa@gmail.com"><i class='fa fa-envelope'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var shrinkHeader = 550;
+            $(window).scroll(function() {
+                var scroll = getCurrentScroll();
+                if (scroll >= shrinkHeader) {
+                    $('header').addClass('shrink');
+                } else {
+                    $('header').removeClass('shrink');
+                }
+            });
+
+            function getCurrentScroll() {
+                return window.pageYOffset || document.documentElement.scrollTop;
+            }
+        });
+    </script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $(".menu-item-has-children").append("<div class='open-menu-link open'>+</div>");
+            $('.menu-item-has-children').append("<div class='open-menu-link close'>-</div>");
+
+            $('.open').addClass('visible');
+
+            $('.open-menu-link').click(function(e) {
+                var childMenu = e.currentTarget.parentNode.children[1];
+                if ($(childMenu).hasClass('visible')) {
+                    $(childMenu).removeClass("visible");
+
+                    $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+                    $(e.currentTarget.parentNode.children[2]).addClass("visible");
+                } else {
+                    $(childMenu).addClass("visible");
+
+                    $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+                    $(e.currentTarget.parentNode.children[3]).addClass("visible");
+                }
+            });
+        });
+    </script>
+
+    <script>
+        window.onscroll = function() {
+            scrollFunction()
+        };
+
+        function scrollFunction() {
+            if (document.body.scrollTop > 800 || document.documentElement.scrollTop > 800) {
+                document.getElementById("myBtn").style.display = "block";
+            } else {
+                document.getElementById("myBtn").style.display = "none";
+            }
+        }
+
+        // When the user clicks on the button, scroll to the top of the document
+        function topFunction() {
+            document.body.scrollTop = 300;
+            document.documentElement.scrollTop = 300;
+        }
+    </script>
+</body>
+
+</html>

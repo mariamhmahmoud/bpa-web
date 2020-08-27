@@ -1,0 +1,681 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <meta charset="UTF-8">
+    <meta name="keywords" content="Guide to Washington DC, DC, Washington, NLC, 2020, BPA, Business Professionals of America, mariam, madelyn, catherine, maya, programmer, content manager, huron, layout designer, researcher">
+
+    <!--required for hamburger menu-->
+    <script src="http://ajax.googleapis.com/ajax/libs/jquery/2.1.4/jquery.min.js"></script>
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/font-awesome/4.4.0/css/font-awesome.min.css">
+
+    <title>About the Developers</title>
+
+    <style type="text/css">
+        @import url('https://fonts.googleapis.com/css?family=Muli');
+        body {
+            margin: 0;
+            padding: 0;
+        }
+        
+        p {
+            font-family: 'Muli';
+            font-size: 18px;
+            line-height: 1.7;
+        }
+        
+        .mission {
+            font-size: 20px;
+            color: black;
+            font-family: 'Muli';
+            margin-left: 10%;
+            margin-right: 10%;
+            text-align: center;
+            margin-top: 5%;
+            line-height: 2.0;
+        }
+        
+        .toppage {
+            box-sizing: border-box;
+            background: url("images-cited/about-top.jpg") no-repeat center center fixed;
+            -webkit-background-size: cover;
+            -moz-background-size: cover;
+            background-size: cover;
+            min-width: 250px;
+            color: #fff;
+            padding-top: 112px;
+            letter-spacing: 2px;
+            font-family: "Montserrat", sans-serif;
+        }
+        
+        .text {
+            font-size: 50px;
+            font-weight: bold;
+            margin-left: 5%;
+            margin-right: 5%;
+            font-family: "Muli";
+            text-align: center;
+            margin-top: 500px;
+            color: white;
+        }
+        /*navigation*/
+        
+        .navigation {
+            text-align: center;
+            width: 100%;
+            font-family: 'Muli';
+            padding: 5px;
+        }
+        
+        .navigation a {
+            text-decoration: none;
+            color: white;
+            padding: 22px;
+            font-weight: bold;
+            display: inline-block;
+            font-size: 15px;
+            margin-top: .5%;
+        }
+        
+        .navigation a:hover {
+            color: #ffffb2;
+            transition: all .5s ease;
+        }
+        
+        .attract-drop {
+            display: none;
+            position: absolute;
+            background-color: white;
+            color: black;
+        }
+        
+        .attract-drop a {
+            color: black;
+            padding: 15px;
+            text-decoration: none;
+            display: block;
+        }
+        
+        .attract-drop a:hover {
+            color: black;
+        }
+        
+        .dropdown-content a:hover {
+            color: none;
+            background-color: lightgrey;
+        }
+        
+        .dropdown {
+            position: relative;
+            display: inline-block;
+        }
+        
+        .dropdown:hover .attract-drop {
+            display: block;
+        }
+        
+        @media screen and (max-width:1200px) {
+            .navigation {
+                text-align: left;
+            }
+            /*end*/
+        }
+        
+        hr {
+            width: 80%;
+        }
+        
+        header {
+            position: fixed;
+            top: 0px;
+            height: 75px;
+            -webkit-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            -moz-box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            box-shadow: 0px 9px 84px 9px rgba(0, 0, 0, 0.5);
+            z-index: 999;
+            width: 100%;
+            padding: 15px 75px 15px 35px;
+            text-align: right;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        header.shrink {
+            background-color: #222;
+            transition-duration: 0.8s;
+            -moz-transition-duration: 0.8s;
+            -webkit-transition-duration: 0.8s;
+            -o-transition-duration: 0.8s;
+        }
+        
+        .top-box {
+            width: 100%;
+            height: 100px;
+            background-color: white;
+            margin-top: 550px;
+            bottom: 0px;
+            opacity: .5;
+        }
+        
+        .logo {
+            float: left;
+            display: inline-block;
+            padding: 30px;
+            color: white;
+            font-size: 25px;
+            font-weight: bolder;
+            font-family: 'Muli';
+            padding-right: 0px;
+        }
+        /*Hamburger*/
+        
+        #menuToggle {
+            display: hidden;
+            position: relative;
+            z-index: 1;
+            -webkit-user-select: none;
+            user-select: none;
+            margin-top: 36px;
+        }
+        
+        #menuToggle input {
+            display: block;
+            width: 40px;
+            height: 32px;
+            position: absolute;
+            top: -7px;
+            left: -5px;
+            cursor: pointer;
+            opacity: 0;
+            z-index: 2;
+            -webkit-touch-callout: none;
+        }
+        
+        #menuToggle span {
+            display: hidden;
+            width: 33px;
+            height: 4px;
+            margin-bottom: 5px;
+            position: relative;
+            background: white;
+            border-radius: 3px;
+            z-index: 1;
+            transform-origin: 4px 0px;
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), background 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0), opacity 0.55s ease;
+        }
+        /*Transform hamburger icon*/
+        
+        #menuToggle span:first-child {
+            transform-origin: 0% 0%;
+        }
+        
+        #menuToggle span:nth-last-child(2) {
+            transform-origin: 0% 100%;
+        }
+        
+        #menuToggle input:checked ~ span {
+            opacity: 1;
+            transform: rotate(45deg) translate(-2px, -1px);
+            background: #232323;
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(3) {
+            opacity: 0;
+            transform: rotate(0deg) scale(0.2, 0.2);
+        }
+        
+        #menuToggle input:checked ~ span:nth-last-child(2) {
+            transform: rotate(-45deg) translate(0, -1px);
+        }
+        
+        #menu {
+            position: absolute;
+            width: 100%;
+            margin: -100px 0 0 -50px;
+            padding: 50px;
+            padding-top: ;
+            background: white;
+            list-style-type: none;
+            -webkit-font-smoothing: antialiased;
+            transform-origin: 0% 0%;
+            transform: translate(-100%, 0);
+            transition: transform 0.5s cubic-bezier(0.77, 0.2, 0.05, 1.0);
+            text-align: left;
+            padding-top: 110px;
+        }
+        
+        #menu li {
+            padding: 10px 0;
+            font-size: 22px;
+            color: black;
+            font-family: 'Muli';
+            font-weight: bold;
+        }
+        
+        #menu a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        #menuToggle input:checked ~ ul {
+            transform: none;
+        }
+        
+        @media screen and (max-width: 1360px) {
+            .navigation {
+                display: none;
+            }
+            .logo {
+                float: right;
+                margin-right: 9%;
+            }
+            #menuToggle {
+                display: fixed;
+            }
+            #menuToggle span {
+                display: block;
+            }
+        }
+        
+        .card {
+            width: 25%;
+            margin-left: 6%;
+            text-align: center;
+            margin-top: 2%;
+            display: inline-block;
+            float: left;
+        }
+        
+        .picture {
+            width: 100%;
+            border-radius: 50%;
+            -webkit-animation: fade 6s;
+            float: left;
+            display: inline-block;
+        }
+        
+        .name {
+            width: 100%;
+            font-family: 'Muli';
+            text-align: center;
+            font-size: 25px;
+            font-weight: bold;
+        }
+        
+        .role {
+            text-align: center;
+            font-family: 'Muli';
+            font-size: 18px;
+            margin-bottom: 30px;
+        }
+        
+        li .sub-menu {
+            display: none;
+            list-style-type: none;
+            color: black;
+        }
+        
+        .visible {
+            display: inline !important;
+            margin-left: 3px;
+            margin-bottom: 3px;
+        }
+        
+        .open-menu-link {
+            display: none;
+            font-size: 22px;
+            cursor: pointer;
+        }
+        
+        .sub-menu li a {
+            font-size: 18px;
+            text-align: left;
+        }
+        
+        .menu-item-has-children a {
+            text-decoration: none;
+            color: black;
+        }
+        
+        .footer {
+            background-color: #363958;
+            height: 200px;
+            margin-bottom: 0px;
+            width: 100%;
+            clear: both;
+        }
+        
+        .foot-text {
+            color: white;
+            font-family: 'Muli';
+            font-size: 16px;
+            margin-left: 3%;
+            margin-right: 3%;
+            float: left;
+            line-height: 1.7;
+            text-align: center;
+        }
+        
+        .btn a {
+            height: 40px;
+            width: 40px;
+            border-radius: 50%;
+            text-align: center;
+            line-height: 32px;
+            color: #fff;
+            cursor: pointer;
+            clear: none;
+            display: inline-block;
+            box-shadow: 0 0 0 2px #fff;
+            -webkit-transition: all .15s ease;
+            transition: all .15s ease;
+        }
+        
+        .btn .fa {
+            padding: 0;
+            display: inline-block;
+            margin-right: -1px;
+        }
+        
+        .btn a,
+        .fa a {
+            display: inline-block;
+            color: #fff;
+            font-size: 20px;
+        }
+        
+        .btn.btn-one a:hover {
+            box-shadow: 0 0 0 4px #3b5998;
+            color: #3b5998;
+        }
+        
+        .btn-one {
+            margin-left: -55px;
+        }
+        
+        .btn-two {
+            margin-top: -40px;
+            margin-left: 0px;
+        }
+        
+        .btn.btn-two a:hover {
+            box-shadow: 0 0 0 4px #00aced;
+            color: #00aced;
+        }
+        
+        .btn-three {
+            margin-top: -40px;
+            margin-left: 55px;
+        }
+        
+        .btn.btn-three a:hover {
+            box-shadow: 0 0 0 4px #b2f2ff;
+            color: #b2f2ff;
+        }
+        
+        .social-media {
+            display: inline-block;
+            margin-left: 50%;
+        }
+        
+        @media screen and (max-width: 1000px) {
+            .footer {
+                height: 270px;
+            }
+        }
+        
+        @media screen and (max-width: 600px) {
+            .text {
+                font-size: 35px;
+                margin-top: 100%;
+            }
+            .card {
+                width: 90%;
+                margin-left: 5%;
+            }
+        }
+        
+        #credit {
+            font-size: 12px;
+            margin-top: 0%;
+            margin-left: 2%;
+            text-align: center;
+            margin: 0 auto;
+        }
+    
+        @media screen and (max-width: 620px) {
+            .text {
+                font-size: 35px;
+                margin-top: 100%;
+            }
+            p {
+                font-size: 14px;
+            }
+            .mission {
+                font-size: 18px;
+            }
+            #credit {
+                margin-left: 5%;
+                margin-right: 5%;
+                font-size: 10px;
+            }
+            .footer {
+                height: 290px;
+            }
+            .logo {
+                font-size: 17.5px;
+                margin-right: 15%;
+            }
+            .foot-text {
+                font-size: 14px;
+            }
+            .social-media {
+                margin-left: 45%;
+            }
+            .mission {
+                margin-left: 5%;
+                margin-right: 5%;
+            }
+            .museum {
+                font-size: 15px;
+            }
+            .cost {
+                font-size: 13px;
+                margin-right: 5%;
+            }
+            #menu li {
+                font-size: 18px;
+            }
+            .card {
+                width: 60%;
+                margin-left: 20%;
+            }
+        }
+        
+        @media handheld,
+        only screen and (max-width: 668px) {
+            .toppage {
+                background-attachment: scroll !important;
+            }
+        }
+    </style>
+</head>
+
+<body>
+    <header>
+        <div class="logo">BPA GUIDE TO WASHINGTON DC</div>
+        <div class="navigation">
+            <a href="index.html">HOME</a>
+            <a href="transportation.html">TRANSPORTATION</a>
+            <a href="food.html">FOOD</a>
+            <div class="dropdown">
+                <a href="attractions.html">ATTRACTIONS</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="museum-non-smith.html">MUSEUMS</a>
+                    <hr>
+                    <a href="gov.html">GOVERNMENT BUILDINGS</a>
+                    <hr>
+                    <a href="parks.html">NATIONAL PARKS</a>
+                    <hr>
+                    <a href="monuments.html">MONUMENTS & MEMORIALS</a>
+                    <hr>
+                    <a href="smithsonian.html">SMITHSONIAN</a>
+                </div>
+            </div>
+            <a href="attire.html">ATTIRE</a>
+            <a href="map.html">MAP</a>
+            <div class="dropdown">
+                <a href="more.html">MORE</a><i class="fa fa-caret-down" style="color: white"></i>
+                <div class="attract-drop">
+                    <a href="planner.html">TRIP PLANNER</a>
+                    <hr>
+                    <a href="about-us.html">ABOUT THE DEVELOPERS</a>
+                    <hr>
+                    <a href="resources.html">RESOURCES</a>
+                </div>
+            </div>
+        </div>
+
+        <!--Hidden until certain screen size-->
+        <div id="menuToggle">
+            <input type="checkbox" />
+            <span></span>
+            <span></span>
+            <span></span>
+
+            <ul id="menu">
+                <li><a href="index.html">
+                    HOME
+                   </a></li>
+                <li><a href="transportation.html">
+                    TRANSPORTATION
+                   </a></li>
+                <li><a href="food.html">
+                    FOOD</a></li>
+
+                <li class="menu-item-has-children"><a href="attractions.html">ATTRACTIONS</a>
+
+                    <ul class="sub-menu">
+                        <li><a href="museum-non-smith.html">MUSEUMS</a></li>
+                        <li><a href="gov.html">GOVERNMENT BUILDINGS</a></li>
+                        <li><a href="parks.html">NATIONAL PARKS</a></li>
+                        <li><a href="monuments.html">MONUMENTS AND MEMORIALS</a></li>
+                        <li><a href="smithsonian.html">SMITHSONIAN</a></li>
+                    </ul>
+                </li>
+
+                <li><a href="attire.html">
+                    ATTIRE</a></li>
+                <li><a href="map.html">
+                    MAP</a></li>
+
+                <li class="menu-item-has-children"><a href="more.html">MORE</a>
+                    <ul class="sub-menu">
+                                                    <li><a href="planner.html">TRIP PLANNER</a></li>
+                        <li><a href="about-us.html">ABOUT THE DEVELOPERS</a></li>
+                        <li><a href="resources.html">RESOURCES</a></li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+        <!--Hidden end-->
+    </header>
+
+    <div class="toppage">
+        <div class="text">ABOUT THE DEVELOPERS</div>
+    </div>
+    <br>
+    <br>
+    <br>
+    <p id="credit">Photo Credit: Ziyan. "Night of Ann Arbor." Pentax Forums, 4 Feb. 2012, www.pentaxforums.com/gallery/photo-night-ann-arbor-32867/.
+    </p>
+    <p style="text-align: center">School: Ann Arbor Huron High School</p>
+    <p style="text-align: center">Chapter: Business Professionals of America, Huron Chapter</p>
+    <p style="text-align: center">City: Ann Arbor, MI</p>
+
+    <div class="card">
+        <img class="picture" src="images-cited/mariam2.jpg" alt="mariam" title="Mariam: Team Programmer">
+        <p class="name">Mariam Mahmoud</p>
+        <div class="role">
+            Team Programmer</div>
+    </div>
+
+    <div class="card">
+        <img class="picture" src="images-cited/maya.jpg" alt="maya" title="Maya: Content Manager">
+        <p class="name">Maya Baveja</p>
+        <div class="role">
+            Content Manager
+            <br> </div>
+    </div>
+
+    <div class="card">
+        <img class="picture" src="images-cited/sophia.jpg" alt="catherine" title="Sophia: Layout Designer">
+        <p class="name">Sophia Papadopoulos</p>
+        <div class="role">
+            Layout Designer</div>
+    </div>
+
+    <div class="footer">
+        <br>
+        <p class="foot-text">This website was proudly created for the 2018-19 Business Professionals of America Website Design Team Competition. The prompt for this year was to develop a website to assist BPA chapters in planning their attendance at NLC in Washington D.C. If you would like to view Business Professionals of America's social media or contact our chapter, please use the buttons below.</p>
+
+        <div class="social-media">
+            <div class='btn btn-one'>
+                <a href="https://www.facebook.com/businessprofessionalsofamerica/"><i class='fa fa-facebook'></i></a>
+            </div>
+            <div class='btn btn-two'>
+                <a href="https://twitter.com/National_BPA"><i class='fa fa-twitter'></i></a>
+            </div>
+            <div class='btn btn-three'>
+                <a href="mailto:huron.bpa@gmail.com"><i class='fa fa-envelope'></i></a>
+            </div>
+        </div>
+    </div>
+
+    <script type="text/javascript">
+        $(function() {
+            var shrinkHeader = 550;
+            $(window).scroll(function() {
+                var scroll = getCurrentScroll();
+                if (scroll >= shrinkHeader) {
+                    $('header').addClass('shrink');
+                } else {
+                    $('header').removeClass('shrink');
+                }
+            });
+
+            function getCurrentScroll() {
+                return window.pageYOffset || document.documentElement.scrollTop;
+            }
+        });
+    </script>
+
+    <script>
+        jQuery(document).ready(function($) {
+            $(".menu-item-has-children").append("<div class='open-menu-link open'>+</div>");
+            $('.menu-item-has-children').append("<div class='open-menu-link close'>-</div>");
+
+            $('.open').addClass('visible');
+
+            $('.open-menu-link').click(function(e) {
+                var childMenu = e.currentTarget.parentNode.children[1];
+                if ($(childMenu).hasClass('visible')) {
+                    $(childMenu).removeClass("visible");
+
+                    $(e.currentTarget.parentNode.children[3]).removeClass("visible");
+                    $(e.currentTarget.parentNode.children[2]).addClass("visible");
+                } else {
+                    $(childMenu).addClass("visible");
+
+                    $(e.currentTarget.parentNode.children[2]).removeClass("visible");
+                    $(e.currentTarget.parentNode.children[3]).addClass("visible");
+                }
+            });
+        });
+    </script>
+</body>
+
+</html>
